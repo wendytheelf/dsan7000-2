@@ -1,0 +1,76 @@
+# Extracting Ifc scope
+targets:
+  # --- Tier-1 Elements---
+  - IfcSlab
+  - IfcFooting
+  - IfcPile
+  - IfcColumn
+  - IfcBeam
+  - IfcRoof
+  - IfcCovering
+  - IfcWall
+  - IfcDoor
+  - IfcWindow
+
+  # --- Tier-2 Elements ---
+  - IfcStair
+  - IfcRailing
+  - IfcCurtainWall
+  - IfcLightFixture           # 照明灯具（IfcFlowTerminal）
+  - IfcSwitchingDevice        # 开关/断路器类（IfcFlowController）
+  - IfcOutlet                 # 插座（IfcFlowTerminal）
+  - IfcAirTerminal            # 风口/出风口（IfcFlowTerminal）
+  - IfcDamper                 # 风阀（IfcFlowController）
+  - IfcCableCarrierSegment    # Cable tray / Conduit（托盘/线管段）
+  - IfcCableCarrierFitting    # Cable tray fitting（托盘/线管管件）
+  - IfcPipeSegment            # 管道段
+  - IfcPipeFitting            # 管件
+  - IfcValve                  # 阀门
+  - IfcDistributionChamberElement  # 检查井
+
+label_rules:
+
+  # ---------- Tier-1 ----------
+  Foundation_Slab: { ifc_class: IfcSlab, include_predefined: [BASESLAB] }
+
+  Foundations_Piles+Footings:
+    { ifc_class_any_of: [IfcFooting, IfcPile] }
+
+  Slabs:
+    { ifc_class: IfcSlab, exclude_predefined: [BASESLAB, FLOOR] }
+
+  Columns (Concrete): { ifc_class: IfcColumn }
+
+  Beam (Concrete): { ifc_class: IfcBeam }
+
+  Floors:
+    { ifc_class: IfcSlab, include_predefined: [FLOOR] }
+
+  Roof: { ifc_class: IfcRoof }
+
+  Ceilings:
+    { ifc_class: IfcCovering, include_predefined: [CEILING] }
+
+  External walls (façade): { ifc_class: IfcWall }
+  Internal walls:          { ifc_class: IfcWall }   
+
+  Doors:   { ifc_class: IfcDoor }
+  Windows: { ifc_class: IfcWindow }
+
+  # ---------- Tier-2（Example 10+） ----------
+  Stairs:         { ifc_class: IfcStair }
+  Railings:       { ifc_class: IfcRailing }
+  Curtain Panels: { ifc_class: IfcCurtainWall }   
+  Lighting Fixture:  { ifc_class: IfcLightFixture }
+  Switch (various types): { ifc_class: IfcSwitchingDevice }
+  Sockets:           { ifc_class: IfcOutlet }
+  Air Terminals / Grilles: { ifc_class: IfcAirTerminal }
+  Dampers:           { ifc_class: IfcDamper }
+
+  Cable Tray:        { ifc_class: IfcCableCarrierSegment }
+  Cable Tray fittings: { ifc_class: IfcCableCarrierFitting }
+
+  Piping:           { ifc_class: IfcPipeSegment }
+  Piping fittings:  { ifc_class: IfcPipeFitting }
+  Valves:           { ifc_class: IfcValve }
+  Manhole:          { ifc_class: IfcDistributionChamberElement }
