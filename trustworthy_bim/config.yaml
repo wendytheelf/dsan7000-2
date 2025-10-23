@@ -1,0 +1,13 @@
+model: "mock"              # 或你實際能跑的本地/雲端 Llama 名稱
+top_n_docs: 5                # 每個 entity 取前 N 個 retrieved_docs（依 rerank）
+auto_accept_threshold: 0.8
+review_threshold: 0.5
+max_tokens: 1024
+temperature: 0.0
+units:
+  power: "kW"
+  flow: "L/s"
+  length: "m"
+  area: "m²"
+  temperature: "°C"
+output_format: "csv"

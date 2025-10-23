@@ -1,0 +1,137 @@
+# ---- Canonical label 列表（照 mentor 提供；大小寫與空白都保留）----
+allowed_classes:
+  - Foundation_Slab
+  - Foundations_Piles+Footings
+  - Slabs
+  - Columns (Concrete)
+  - Beam (Concrete)
+  - Floors
+  - Roof
+  - Ceilings
+  - External walls (façade)
+  - Internal walls
+  - Doors
+  - Windows
+  - Leveling_Morter
+  - Column (Steel)
+  - Beam (Steel)
+  - Plinth Beam
+  - Puddle_Pipes
+  - Registros/Box
+  - Reinforcing_Steel
+  - Down pipe, collectors (stormwater)
+  - Inspection covers
+  - Cable Tray
+  - Cable Tray fittings
+  - Piping
+  - Piping fittings
+  - Manhole
+  - Base_Plate
+  - Structural_Stinfners
+  - Shear_Key
+  - Bracket
+  - Post_Tensioning
+  - Stairs
+  - Railings
+  - Curtain Panels
+  - Wall sweeps
+  - Evacuation signs
+  - Lighting Fixture
+  - Switch (various types)
+  - Emergency lighting
+  - Conduit
+  - Conduit fittings
+  - Valves
+  - Blindings
+  - Sockets
+  - Air Terminals / Grilles
+  - Dampers
+  - Flexible duct
+  - Sprinkler
+  - Extinguishers
+  - Hose reel
+  - Hydrant
+  - Call Point
+  - Detector
+  - Fire Alarm Control panel
+  - Audible/visual discharge alarm
+  - Cameras
+  - Electric Boiler
+  - Sink
+
+# ---- 直覺對映（不含細分；細分靠 keyword / PredefinedType）----
+ifc_to_canonical:
+  IfcSlab: Slabs
+  IfcRoof: Roof
+  IfcCovering: Ceilings    # 若 PredefinedType=CEILING → Ceilings；若=FLOORING → Floors（見 heuristic）
+  IfcWall: Internal walls  # 外牆/內牆靠名稱關鍵字再調整
+  IfcDoor: Doors
+  IfcWindow: Windows
+  IfcColumn: Columns (Concrete)    # 之後以關鍵字判斷 Steel/Concrete
+  IfcBeam: Beam (Concrete)
+  IfcRailing: Railings
+  IfcStair: Stairs
+  IfcCurtainWall: Curtain Panels
+  IfcFlowTerminal: Sink            # 包含多種端部件，暫以名稱判斷（Sink、Hose reel 等）
+  IfcSanitaryTerminal: Sink
+  IfcBoiler: Electric Boiler
+  IfcSpace: Floors                 # 有些模型會把地坪當 Covering/Flooring/Space，暫給 Floors
+  IfcPlate: Base_Plate
+  IfcMember: Reinforcing_Steel
+  IfcCableCarrierSegment: Cable Tray
+  IfcCableCarrierFitting: Cable Tray fittings
+  IfcCableSegment: Conduit
+  IfcCableFitting: Conduit fittings
+  IfcPipeSegment: Piping
+  IfcPipeFitting: Piping fittings
+  IfcDuctSegment: Flexible duct
+  IfcDuctFitting: Flexible duct
+  IfcAirTerminal: Air Terminals / Grilles
+  IfcDamper: Dampers
+  IfcValve: Valves
+  IfcFireSuppressionTerminal: Sprinkler   # 之後以名稱判斷 Extinguishers/Hose reel/Hydrant 等
+  IfcLightFixture: Lighting Fixture
+  IfcLamp: Emergency lighting
+  IfcSwitchingDevice: Switch (various types)
+  IfcOutlet: Sockets
+  IfcAlarm: Audible/visual discharge alarm
+  IfcSensor: Detector
+  IfcElectricAppliance: Cameras
+
+# ---- 關鍵字啟發式（mock/LLM 輔助使用；若命中會覆蓋上面的粗略對映）----
+keyword_overrides:
+  # 牆
+  External walls (façade): ["external", "façade", "facade", "exterior", "外牆"]
+  Internal walls: ["internal", "partition", "內牆"]
+
+  # 板/樓地板/基礎
+  Foundation_Slab: ["foundation slab", "raft", "mat foundation", "基礎板", "base slab"]
+  Floors: ["flooring", "finish floor", "地坪", "floor"]
+  Roof: ["roof", "roof slab"]
+
+  # 材料細分
+  Columns (Concrete): ["concrete column", "rc column", "柱(混凝土)"]
+  Column (Steel): ["steel column", "h-beam column", "柱(鋼)"]
+  Beam (Concrete): ["concrete beam", "rc beam", "梁(混凝土)"]
+  Beam (Steel): ["steel beam", "h-beam", "梁(鋼)"]
+
+  # MEP
+  Flexible duct: ["flex duct", "flexible duct"]
+  Sprinkler: ["sprinkler"]
+  Extinguishers: ["extinguisher"]
+  Hose reel: ["hose reel"]
+  Hydrant: ["hydrant"]
+  Sink: ["sink", "basin"]
+  Electric Boiler: ["electric boiler", "boiler (electric)"]
+  Valves: ["valve"]
+  Air Terminals / Grilles: ["grille", "diffuser", "register"]
+  Cable Tray: ["cable tray"]
+  Cable Tray fittings: ["tray fitting"]
+  Conduit: ["conduit"]
+  Conduit fittings: ["conduit fitting"]
+  Piping: ["pipe segment", "pipe"]
+  Piping fittings: ["elbow", "tee", "pipe fitting"]
+  Detector: ["smoke detector", "heat detector", "detector"]
+  Fire Alarm Control panel: ["fire alarm control panel", "f.a. panel", "fap"]
+  Audible/visual discharge alarm: ["strobe", "sounder", "horn", "buzzer"]
+  Cameras: ["camera", "cctv"]

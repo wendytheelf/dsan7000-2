@@ -1,0 +1,6 @@
+flow_rate:
+  min: 0.01
+  max: 500.0    # L/s
+power:
+  min: 0.05
+  max: 2000.0   # kW

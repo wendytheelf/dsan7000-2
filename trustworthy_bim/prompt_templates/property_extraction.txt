@@ -1,0 +1,13 @@
+System: You extract missing engineering properties for the canonical class.
+Prefer SI units: kW, L/s, m, m², °C. Return only properties not already in Known properties.
+Answer only in JSON (array).
+
+Input:
+- Canonical class: {canonical_class}
+- Known properties: {known_props}
+- Attributes: {attributes}
+- Text/context snippets (top {top_n}):
+{retrieved_block}
+
+Output JSON (array of objects):
+[{{"k":"<name>","v":<value or string>,"u":"<unit or null>","confidence":0.0}}, ...]

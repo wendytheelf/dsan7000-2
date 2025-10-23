@@ -1,0 +1,2 @@
+Pump: ["flow_rate", "power"]
+Fan:  ["flow_rate"]
