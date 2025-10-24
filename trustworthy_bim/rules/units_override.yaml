@@ -1,0 +1,12 @@
+defaults:
+  # 幾何尺寸：你的資料顯然是 mm（Qto_* 常見）
+  length: mm         # 對 generic "Length" 生效（我們會以量綱對齊）
+  width: mm
+  depth: mm
+  thickness: mm
+  diameter: mm
+
+  # 若你資料裡 NetArea/NetSideArea/CrossSectionArea 本來就是 m2，這裡可不寫
+  # netarea: m2
+  # netsidearea: m2
+  # crosssectionarea: m2

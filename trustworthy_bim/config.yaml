@@ -1,4 +1,10 @@
-model: "mock"              # 或你實際能跑的本地/雲端 Llama 名稱
+model:
+  model: mock         # 或 llama
+  max_tokens: 800
+  temperature: 0.0
+
+confidence_threshold: 0.75
+retrieval_top_n: 5
 top_n_docs: 5                # 每個 entity 取前 N 個 retrieved_docs（依 rerank）
 auto_accept_threshold: 0.8
 review_threshold: 0.5

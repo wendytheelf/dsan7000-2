@@ -80,7 +80,7 @@ _DIAM_RE = re.compile(r"(?i)[øØφphi]*\s*(?P<num>\d+(?:\.\d+)?)\s*(?P<unit>mm|
 NAME_ALIASES = {
     # 幾何
     "length":"length","width":"length","height":"length","depth":"length","thickness":"length","diameter":"length","dia":"length","radius":"length",
-    "netarea":"area","grossarea":"area","area":"area",
+    "netarea":"area","grossarea":"area","area":"area","netsidearea": "area","crosssectionarea": "area",
     "netvolume":"volume","grossvolume":"volume","volume":"volume",
     # 流量/速度
     "flow":"vol_flow","flow_rate":"vol_flow","q":"vol_flow","airflow":"vol_flow","cfm":"vol_flow","velocity":"velocity",
@@ -92,6 +92,7 @@ NAME_ALIASES = {
     "pressure":"pressure","press":"pressure","static_pressure":"pressure",
     # 其他
     "percent":"percent","percentage":"percent","efficiency":"percent","angle":"angle",
+    
 }
 UNIT_CANON = {
     "m":"m","meter":"m","metre":"m",
@@ -459,9 +460,19 @@ def main():
         ensure_outdir(Path("logs/errors"))
 
         # config
-        model_cfg: Dict[str, Any] = cfg.get("model") or {"model": "mock", "max_tokens": 800, "temperature": 0.0}
-        conf_threshold: float = float(cfg.get("confidence_threshold", 0.75))
-        top_n: int = int(cfg.get("retrieval_top_n", 5))
+        raw_model = cfg.get("model", "mock")
+        # 允許 YAML 寫成 "model: mock" 或 "model: {model: mock, ...}"
+        if isinstance(raw_model, str):
+            model_cfg = {"model": raw_model, "max_tokens": 800, "temperature": 0.0}
+        elif isinstance(raw_model, dict):
+            model_cfg = {"model": raw_model.get("model", "mock"),
+                        "max_tokens": raw_model.get("max_tokens", 800),
+                        "temperature": raw_model.get("temperature", 0.0)}
+        else:
+            model_cfg = {"model": "mock", "max_tokens": 800, "temperature": 0.0}
+
+        conf_threshold = float(cfg.get("confidence_threshold", 0.75))
+        top_n = int(cfg.get("retrieval_top_n", 5))
 
         # rules
         class_maps = load_yaml(Path("rules/class_maps.yaml"))
