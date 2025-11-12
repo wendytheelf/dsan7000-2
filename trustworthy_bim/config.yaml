@@ -1,11 +1,19 @@
-model:
-  model: mock         # 或 llama
-  max_tokens: 800
-  temperature: 0.0
+# model:
+#   model: mock   
+#   max_tokens: 800
+#   temperature: 0.0
+
+llm:
+  provider: ollama
+  base_url: "http://localhost:11434/v1"
+  api_key: "ollama"
+  model: "llama3:8b"
+  temperature: 0.2
+  max_tokens: 512
 
 confidence_threshold: 0.75
 retrieval_top_n: 5
-top_n_docs: 5                # 每個 entity 取前 N 個 retrieved_docs（依 rerank）
+top_n_docs: 5                # retrieved_docs
 auto_accept_threshold: 0.8
 review_threshold: 0.5
 max_tokens: 1024

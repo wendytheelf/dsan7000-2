@@ -2,12 +2,12 @@
 """
 ifc_to_canonical.py
 End-to-end CLI:
-- 讀取 Wendy 的 UIR JSONL（每行一個 entity 包）
-- 呼叫 llm_runner.class_mapping / property_extraction
-- 規則化單位 (deterministic TE)
-- 驗證（必填/範圍/鄰居一致性/AI 置信度）
-- 產生 canonical CSV：assets / asset_props / asset_relations / asset_flags
-- 報表 stage_report.json
+- Read Wendy's UIR JSONL (one entity pack per line)
+- Call llm_runner.class_mapping / property_extraction
+- Deterministic unit normalization (TE)
+- Validation (required/range/neighbor consistency/AI confidence)
+- Produce canonical CSVs: assets / asset_props / asset_relations / asset_flags
+- Emit stage_report.json
 """
 
 from __future__ import annotations
@@ -77,23 +77,25 @@ _NUM_UNIT_RE = re.compile(
 )
 _DIAM_RE = re.compile(r"(?i)[øØφphi]*\s*(?P<num>\d+(?:\.\d+)?)\s*(?P<unit>mm|cm|in|\"|')")
 
+# Canonical name kinds (aliases)
 NAME_ALIASES = {
-    # 幾何
+    # Geometry
     "length":"length","width":"length","height":"length","depth":"length","thickness":"length","diameter":"length","dia":"length","radius":"length",
-    "netarea":"area","grossarea":"area","area":"area","netsidearea": "area","crosssectionarea": "area",
+    "netarea":"area","grossarea":"area","area":"area","netsidearea":"area","crosssectionarea":"area",
     "netvolume":"volume","grossvolume":"volume","volume":"volume",
-    # 流量/速度
+    # Flow / Velocity
     "flow":"vol_flow","flow_rate":"vol_flow","q":"vol_flow","airflow":"vol_flow","cfm":"vol_flow","velocity":"velocity",
-    # 功率/能量/電
+    # Power / Energy / Electrical
     "power":"power","rated_power":"power","kw":"power","power_kw":"power","btu/h":"power","heat_gain":"power","heat_loss":"power",
     "voltage":"voltage","current":"current","frequency":"frequency","power_factor":"unitless",
-    # 溫度/壓力
+    # Temperature / Pressure
     "temperature":"temperature","temp":"temperature","setpoint":"temperature",
     "pressure":"pressure","press":"pressure","static_pressure":"pressure",
-    # 其他
+    # Others
     "percent":"percent","percentage":"percent","efficiency":"percent","angle":"angle",
-    
 }
+
+# Canonical units
 UNIT_CANON = {
     "m":"m","meter":"m","metre":"m",
     "mm":"mm","cm":"cm","in":"in","\"":"in","inch":"in","ft":"ft","'":"ft",
@@ -156,16 +158,16 @@ def _canon_kind(name: str) -> str:
     return "unknown"
 
 def normalize_unit(name: str, value, unit: Optional[str], unit_overrides: Dict[str, Any] | None = None):
-    """回傳 (value_norm, unit_norm, reason)"""
+    """Return (value_norm, unit_norm, reason)."""
     kind = _canon_kind(name)
     v, u = None, None
 
-    # overrides: 預設單位（只有在缺單位時才補）
+    # Overrides: default units (only fill when unit is missing)
     default_u = None
     if unit_overrides and "defaults" in unit_overrides:
         default_u = unit_overrides["defaults"].get((name or "").strip().lower())
 
-    # parse
+    # Parse value and unit
     if isinstance(value, str):
         v, parsed_u = _parse_num_unit_from_string(value)
         u = parsed_u or unit or default_u
@@ -262,7 +264,7 @@ def normalize_unit(name: str, value, unit: Optional[str], unit_overrides: Dict[s
 
 def validate_required(props_flat: Dict[str, Any], required: List[str]) -> List[str]:
     missing = []
-    for k in required or []:
+    for k in (required or []):
         if k not in props_flat or props_flat.get(k) in (None, "", [], {}):
             missing.append(k)
     return missing
@@ -280,8 +282,8 @@ def validate_neighbors(canonical_class: str, neighbors: List[Dict[str, Any]], ne
     if not canonical_class or not neighbor_rules: return None
     expect = neighbor_rules.get(canonical_class)
     if not expect: return None
-    # 簡單檢查：是否至少有一個在期待清單中的 class
-    classes = [n.get("class") for n in neighbors or []]
+    # Simple check: at least one neighbor class is in the expected list
+    classes = [n.get("class") for n in (neighbors or [])]
     if not any(c in expect for c in classes):
         return f"expected any of {expect}, got {classes}"
     return None
@@ -326,29 +328,29 @@ def process_one_pack(
     ent = pack.get("entity") or {}
     run_id = pack.get("run_id") or "unknown_run"
 
-    # 來源/本地ID：以 Wendy 的 pack 欄位為準
+    # Source/local ID: follow Wendy's pack fields
     source = run_id
     local_id = ent.get("uid") or ent.get("global_id") or ent.get("id") or "unknown"
     asset_id = stable_uuid(source, str(local_id))
 
-    # LLM：class mapping
+    # LLM: class mapping
     cls_out = llm_class_map(pack, class_tmpl, allowed_classes, top_n, model_cfg)
     canonical = cls_out.get("canonical_class")
     class_conf = float(cls_out.get("confidence") or 0.0)
     class_codes = cls_out.get("class_codes") or {}
 
-    # 已有屬性攤平
+    # Flatten existing properties
     known_flat = flatten_known_props(ent.get("properties"))
-    # LLM：抽缺屬性（mock 目前返回空）
+    # LLM: extract missing properties (mock may return empty)
     new_props = llm_prop_extract(pack, prop_tmpl, canonical, known_flat, top_n, model_cfg)
 
-    # 合併屬性，new_props 覆蓋舊的同名（若有）
+    # Merge properties; new_props overrides by name if duplicated
     merged_props: Dict[str, Dict[str, Any]] = {}  # name -> {v,u,confidence,source}
-    # 先放已知
+    # existing
     for k, v in known_flat.items():
         merged_props[k] = {"v": v, "u": None, "confidence": 1.0, "source": "ifc"}
-    # 再放 LLM 新增
-    for rec in new_props or []:
+    # newly extracted
+    for rec in (new_props or []):
         k = str(rec.get("k"))
         if not k: continue
         merged_props[k] = {
@@ -358,7 +360,7 @@ def process_one_pack(
             "source": "llm",
         }
 
-    # TE：單位正規化
+    # TE: unit normalization
     unit_overrides = load_yaml(Path("rules/unit_overrides.yaml"))
     for name, obj in merged_props.items():
         v_raw = obj.get("v")
@@ -370,7 +372,7 @@ def process_one_pack(
         obj["unit_norm"] = u_norm
         obj["te_reason"] = reason
 
-    # 寫 assets（1 row）
+    # Write assets (1 row)
     out_rows_assets.append({
         "asset_id": asset_id,
         "source": source,
@@ -380,13 +382,13 @@ def process_one_pack(
         "canonical_class": canonical,
         "class_confidence": class_conf,
         "class_codes": json.dumps(class_codes, ensure_ascii=False),
-        "location_site": None,  # 可從 entity.spatial_path 拆，如果需要
+        "location_site": None,   # derive from entity.spatial_path if needed
         "location_building": None,
         "location_level": None,
         "location_space": None,
     })
 
-    # 寫 props（N rows）
+    # Write props (N rows)
     for name, obj in merged_props.items():
         out_rows_props.append({
             "asset_id": asset_id,
@@ -400,8 +402,8 @@ def process_one_pack(
             "te_reason": obj.get("te_reason"),
         })
 
-    # 寫 relations（neighbors）
-    for nb in pack.get("neighbors") or []:
+    # Write relations (neighbors)
+    for nb in (pack.get("neighbors") or []):
         out_rows_rel.append({
             "asset_id": asset_id,
             "relation": nb.get("rel"),
@@ -411,8 +413,8 @@ def process_one_pack(
             "neighbor_uid": nb.get("uid"),
         })
 
-    # 驗證：flags
-    # - AI 低置信度
+    # Validation: flags
+    # - Low AI confidence
     if class_conf < conf_threshold:
         out_rows_flags.append({"asset_id": asset_id, "flag": "LOW_AI_CONF", "reason": f"class_conf={class_conf}"})
 
@@ -429,7 +431,7 @@ def process_one_pack(
         if msg:
             out_rows_flags.append({"asset_id": asset_id, "flag": "OUT_OF_RANGE", "reason": f"{k}: {msg}"})
 
-    # - INCONSISTENT_NEIGHBOR（很簡單的期望檢查）
+    # - INCONSISTENT_NEIGHBOR (simple expectation check)
     msg = validate_neighbors(canonical, pack.get("neighbors") or [], neighbor_rules or {})
     if msg:
         out_rows_flags.append({"asset_id": asset_id, "flag": "INCONSISTENT_NEIGHBOR", "reason": msg})
@@ -444,7 +446,7 @@ def main():
 
     runp = sub.add_parser("run", help="run pipeline")
     runp.add_argument("--in", dest="infile", required=True, help="input JSONL (uir_enriched.jsonl)")
-    runp.add_argument("--outdir", required=True, help="output dir")
+    runp.add_argument("--outdir", required=True, help="output directory")
     runp.add_argument("--config", required=False, default="config.yaml", help="config.yaml")
     runp.add_argument("--limit", type=int, default=0, help="limit number of lines (0=all)")
     runp.add_argument("--tolerant", action="store_true", help="continue on errors")
@@ -461,7 +463,7 @@ def main():
 
         # config
         raw_model = cfg.get("model", "mock")
-        # 允許 YAML 寫成 "model: mock" 或 "model: {model: mock, ...}"
+        # Allow YAML to specify either "model: mock" or an object "model: {model: mock, ...}"
         if isinstance(raw_model, str):
             model_cfg = {"model": raw_model, "max_tokens": 800, "temperature": 0.0}
         elif isinstance(raw_model, dict):

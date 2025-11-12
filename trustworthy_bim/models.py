@@ -3,7 +3,7 @@ from typing import List, Dict, Optional, Any
 from uuid import uuid5, NAMESPACE_URL
 
 
-# ---------- Retrieved doc (寬鬆) ----------
+# ---------- Retrieved doc ----------
 class RetrievedDoc(BaseModel):
     model_config = ConfigDict(extra="allow")
     doc_id: Optional[str] = None
@@ -15,7 +15,7 @@ class RetrievedDoc(BaseModel):
     snippet: Optional[str] = None
 
 
-# ---------- Entity (符合你貼的樣子) ----------
+# ---------- Entity ----------
 class Entity(BaseModel):
     model_config = ConfigDict(extra="allow")
     uid: str

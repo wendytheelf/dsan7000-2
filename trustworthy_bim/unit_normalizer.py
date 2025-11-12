@@ -7,7 +7,7 @@ def _to_float(x):
 
 def normalize(name: str, value, unit: str | None):
     """
-    回傳: (value_norm, unit_norm, notes)
+    Return: (value_norm, unit_norm, notes)
     """
     if value is None:
         return None, unit, "no_value"
