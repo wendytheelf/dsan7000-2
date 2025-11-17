@@ -386,6 +386,10 @@ def process_one_pack(
         "location_building": None,
         "location_level": None,
         "location_space": None,
+        "true_class": "",              # to be filled during manual review
+        "review_status": "PENDING",    # PENDING / REVIEWED / UNCERTAIN
+        "reviewer_notes": "",          # free text
+        "review_timestamp": "", 
     })
 
     # Write props (N rows)
@@ -543,7 +547,7 @@ def main():
         write_csv(outdir / "assets.csv", assets_rows, [
             "asset_id","source","local_id","ifc_class","name",
             "canonical_class","class_confidence","class_codes",
-            "location_site","location_building","location_level","location_space"
+            "location_site","location_building","location_level","location_space""true_class","review_status","reviewer_notes","review_timestamp",
         ])
         write_csv(outdir / "asset_props.csv", props_rows, [
             "asset_id","name","value_raw","unit_raw","value_norm","unit_norm","confidence","source","te_reason"
@@ -555,6 +559,83 @@ def main():
             "asset_id","flag","reason"
         ])
 
+        # ------------------------
+        # NEW: build review_queue.csv for manual review
+        # ------------------------
+        # Aggregate flags by asset_id
+        from collections import defaultdict
+
+        flags_by_asset = defaultdict(list)
+        for fr in flag_rows:
+            aid = fr.get("asset_id")
+            if not aid:
+                continue
+            flags_by_asset[aid].append(fr.get("flag"))
+
+        # Define flag priority (for primary review order)
+        flag_priority = {
+            "LOW_AI_CONF": 0,
+            "INCONSISTENT_NEIGHBOR": 1,
+            "MISSING_REQUIRED_PROPERTY": 2,
+            "OUT_OF_RANGE": 3,
+        }
+
+        def primary_flag(flags: List[str]) -> str:
+            if not flags:
+                return ""
+            return sorted(flags, key=lambda f: flag_priority.get(f, 99))[0]
+
+        review_rows: List[Dict[str, Any]] = []
+        for asset in assets_rows:
+            aid = asset.get("asset_id")
+            flags = flags_by_asset.get(aid, [])
+            uniq_flags = sorted(set(f for f in flags if f))
+            pf = primary_flag(uniq_flags)
+
+            review_rows.append({
+                "asset_id": aid,
+                "ifc_class": asset.get("ifc_class"),
+                "name": asset.get("name"),
+                "canonical_class": asset.get("canonical_class"),
+                "class_confidence": asset.get("class_confidence"),
+                # all flags collapsed into one cell for reviewer context
+                "flags": ";".join(uniq_flags),
+                "primary_flag": pf,
+                # review fields (same as in assets.csv, but easier to work with separately)
+                "true_class": asset.get("true_class", ""),
+                "review_status": asset.get("review_status", "PENDING"),
+                "reviewer_notes": asset.get("reviewer_notes", ""),
+                "review_timestamp": asset.get("review_timestamp", ""),
+            })
+
+        # sort: flagged first, then by primary_flag priority, then by ascending confidence
+        def review_sort_key(r: Dict[str, Any]):
+            has_flag = 0 if r.get("flags") else 1  # 0 = has flags, 1 = no flags
+            pf = r.get("primary_flag") or ""
+            pri = flag_priority.get(pf, 99)
+            try:
+                conf = float(r.get("class_confidence") or 0.0)
+            except Exception:
+                conf = 0.0
+            return (has_flag, pri, conf)
+
+        review_rows.sort(key=review_sort_key)
+
+        write_csv(outdir / "review_queue.csv", review_rows, [
+            "asset_id",
+            "ifc_class",
+            "name",
+            "canonical_class",
+            "class_confidence",
+            "flags",
+            "primary_flag",
+            "true_class",
+            "review_status",
+            "reviewer_notes",
+            "review_timestamp",
+        ])
+
+
         # stage report
         stage_report = {
             "total_input_lines": total,
@@ -562,6 +643,7 @@ def main():
             "props_written": len(props_rows),
             "relations_written": len(rel_rows),
             "flags_written": len(flag_rows),
+            "review_queue_size": len(review_rows),
             "errors": errors
         }
         (outdir / "stage_report.json").write_text(json.dumps(stage_report, ensure_ascii=False, indent=2), encoding="utf-8")
