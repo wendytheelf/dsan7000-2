@@ -288,6 +288,72 @@ def validate_neighbors(canonical_class: str, neighbors: List[Dict[str, Any]], ne
         return f"expected any of {expect}, got {classes}"
     return None
 
+def validate_keywords(
+    canonical_class: str,
+    entity: Dict[str, Any],
+    keyword_rules: Dict[str, Any]
+) -> Optional[str]:
+    """
+    Soft keyword-based consistency check.
+
+    keyword_rules sample schema: 
+    {
+      "Pump": {
+        "any": ["pump"],
+        "none": ["valve"]
+      },
+      "Valve": {
+        "any": ["valve"],
+        "none": ["pump"]
+      }
+    }
+    """
+    if not canonical_class or not keyword_rules:
+        return None
+
+    rules = keyword_rules.get(canonical_class)
+    if not rules:
+        return None
+
+    texts = []
+    name = entity.get("name")
+    if isinstance(name, str):
+        texts.append(name)
+
+    props = entity.get("properties") or {}
+    for pset, kv in props.items():
+        if not isinstance(kv, dict):
+            continue
+        for k, v in kv.items():
+            if isinstance(v, str):
+                texts.append(v)
+
+    full_text = " ".join(texts).lower()
+    if not full_text:
+        return None 
+
+    any_kws = [kw.lower() for kw in rules.get("any", []) if kw]
+    none_kws = [kw.lower() for kw in rules.get("none", []) if kw]
+
+    # any：at least one appear
+    missing_any = False
+    if any_kws:
+        if not any(kw in full_text for kw in any_kws):
+            missing_any = True
+
+    # none: unwanted results
+    bad_none = [kw for kw in none_kws if kw in full_text]
+
+    if missing_any and bad_none:
+        return f"missing_any_keywords={any_kws}, but found_forbidden_keywords={bad_none}"
+    if missing_any:
+        return f"missing_any_keywords={any_kws}"
+    if bad_none:
+        return f"found_forbidden_keywords={bad_none}"
+
+    return None  # nothing's wrong
+
+
 # =========================
 # Helpers
 # =========================
@@ -318,6 +384,7 @@ def process_one_pack(
     rule_required: Dict[str, Any],
     rule_ranges: Dict[str, Any],
     neighbor_rules: Dict[str, Any],
+    keyword_rules: Dict[str, Any],
     conf_threshold: float,
     out_rows_assets: List[Dict[str, Any]],
     out_rows_props: List[Dict[str, Any]],
@@ -440,6 +507,9 @@ def process_one_pack(
     if msg:
         out_rows_flags.append({"asset_id": asset_id, "flag": "INCONSISTENT_NEIGHBOR", "reason": msg})
 
+    msg = validate_keywords(canonical, ent, keyword_rules or {})
+    if msg:
+        out_rows_flags.append({"asset_id": asset_id, "flag": "KEYWORD_MISMATCH", "reason": msg})
 
 # =========================
 # CLI
@@ -486,6 +556,7 @@ def main():
         required_rules = load_yaml(Path("rules/required_props.yaml"))
         ranges_rules = load_yaml(Path("rules/ranges.yaml"))
         neighbor_rules = load_yaml(Path("rules/neighbor_rules.yaml"))
+        keyword_rules = load_yaml(Path("rules/keyword_rules.yaml"))
 
         # templates
         class_tmpl = read_text_if_exists(Path("prompt_templates/class_mapping.txt"))
@@ -514,7 +585,8 @@ def main():
                     process_one_pack(
                         pack, class_tmpl, prop_tmpl, allowed_classes, top_n, model_cfg,
                         te_cfg={}, rule_required=required_rules, rule_ranges=ranges_rules,
-                        neighbor_rules=neighbor_rules, conf_threshold=conf_threshold,
+                        neighbor_rules=neighbor_rules, keyword_rules=keyword_rules,
+                        conf_threshold=conf_threshold,
                         out_rows_assets=assets_rows, out_rows_props=props_rows,
                         out_rows_rel=rel_rows, out_rows_flags=flag_rows
                     )
@@ -547,7 +619,7 @@ def main():
         write_csv(outdir / "assets.csv", assets_rows, [
             "asset_id","source","local_id","ifc_class","name",
             "canonical_class","class_confidence","class_codes",
-            "location_site","location_building","location_level","location_space""true_class","review_status","reviewer_notes","review_timestamp",
+            "location_site","location_building","location_level","location_space","true_class","review_status","reviewer_notes","review_timestamp",
         ])
         write_csv(outdir / "asset_props.csv", props_rows, [
             "asset_id","name","value_raw","unit_raw","value_norm","unit_norm","confidence","source","te_reason"

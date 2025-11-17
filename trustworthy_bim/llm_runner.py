@@ -11,6 +11,7 @@ import json
 import logging
 import re
 from typing import Any, Dict, List
+import requests
 
 # ---------------------------------------------------------------------
 # Low-noise logging
@@ -65,9 +66,58 @@ def _render_template_safe_or_none(tmpl: str, mapping: Dict[str, str]) -> str | N
 #   - mock: handled in class_mapping/property_extraction
 #   - non-mock: raise (you can implement HTTP to your Llama endpoint here)
 # ---------------------------------------------------------------------
+# def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float = 0.0) -> str:
+#     # If you wire up a real endpoint, implement it here.
+#     raise NotImplementedError("Connect Llama here.")
+
 def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float = 0.0) -> str:
-    # If you wire up a real endpoint, implement it here.
-    raise NotImplementedError("Connect Llama here.")
+    """
+    Generic LLM caller.
+    - If model == 'mock': 不會進到這裡（上層已處理）
+    - 其他情況：視為 Ollama 模型名稱，呼叫本機 Ollama API (/api/generate)
+
+    注意：
+    - 這個函式只回傳「模型生成的純文字」，上層會再用 json.loads() 解析。
+    - prompt 已經在 class_mapping / property_extraction 中加好：
+      '請回傳有效 JSON' 的指示。
+    """
+    model_name = _normalize_model_name(model)
+
+    if not model_name:
+        raise ValueError("run_llm called with empty model name")
+
+    # Ollama /api/generate 文件的基本格式：
+    # POST http://127.0.0.1:11434/api/generate
+    # payload: { "model": "...", "prompt": "...", "stream": false, "options": { ... } }
+    payload = {
+        "model": model_name,
+        "prompt": prompt,
+        "stream": False,
+        "options": {
+            # Ollama 參數名稱是 num_predict，不是 max_tokens：
+            # 這裡直接使用同樣概念
+            "num_predict": int(max_tokens),
+            "temperature": float(temperature),
+        },
+    }
+
+    try:
+        resp = requests.post(
+            "http://127.0.0.1:11434/api/generate",
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        # Ollama /api/generate 回傳格式：{ "model": "...", "created_at": "...", "response": "..." , ... }
+        text = data.get("response", "")
+        if not isinstance(text, str):
+            raise ValueError(f"Ollama response missing 'response' text: {data}")
+        return text
+    except Exception as e:
+        logger.error("run_llm failed for model=%s: %s", model_name, e)
+        # 讓上層 class_mapping / property_extraction 的 try/except 去 fallback
+        raise
 
 
 # ---------------------------------------------------------------------
@@ -75,6 +125,20 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
 # ---------------------------------------------------------------------
 def _norm(s: Any) -> str:
     return (s or "").strip().lower()
+
+def _normalize_model_name(model: str | None) -> str:
+    """
+    Normalize model name for Ollama.
+    - Strips spaces
+    - If it starts with 'ollama:', remove這個 prefix
+      e.g. 'ollama:qwen2.5:7b-instruct' → 'qwen2.5:7b-instruct'
+    """
+    if not model:
+        return ""
+    m = model.strip()
+    if m.startswith("ollama:"):
+        return m.split(":", 1)[1]
+    return m
 
 
 def _hit(name: str, keywords: List[str] | None) -> bool:

@@ -1,0 +1,15 @@
+Pump:
+  any: ["pump"]
+  none: ["valve", "radiator"]
+
+Valve:
+  any: ["valve"]
+  none: ["pump"]
+
+Wall:
+  any: ["wall"]
+  none: ["beam", "column"]
+
+Beam:
+  any: ["beam"]
+  none: ["wall"]
