@@ -1,4 +1,7 @@
 System: You extract missing engineering properties for the canonical class.
+Your task is to understand the SEMANTIC MEANING of what properties are needed based on
+the element's functional role, not just keyword matching.
+
 Prefer SI units: kW, L/s, m, m², °C. Return only properties not already in Known properties.
 Answer only in JSON (array).
 
@@ -8,6 +11,17 @@ Input:
 - Attributes: {attributes}
 - Text/context snippets (top {top_n}):
 {retrieved_block}
+
+Task:
+1) Understand the SEMANTIC ROLE of this canonical class:
+   - What ENGINEERING PROPERTIES define its behavior and performance?
+   - What PROPERTIES are essential for its function in the building system?
+   - What can you INFER from the retrieved context about typical properties?
+
+2) Extract missing properties based on SEMANTIC UNDERSTANDING:
+   - Infer properties from the element's functional purpose
+   - Use retrieved context to understand domain knowledge
+   - Consider typical engineering properties for this type of element
 
 Output JSON (array of objects):
 [{{"k":"<name>","v":<value or string>,"u":"<unit or null>","confidence":0.0}}, ...]
