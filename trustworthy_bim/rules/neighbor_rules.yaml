@@ -1,2 +1,101 @@
-Pump: ["Pipe","Valve","Motor"]
-Fan:  ["Duct","Damper","Motor"]
+# Simple format (list) - supported for backward compatibility
+# Fan:  ["Duct","Damper","Motor"]
+
+# Advanced format (with relation types and min_count) - recommended for new rules
+Pump:
+  relations:
+    partOfSystem:
+      min_count: 1      # pump should belong to at least one system (e.g., CHW/HW)
+    connectedTo:
+      min_count: 2      # at least inlet + outlet (pipes)
+
+Valve:
+  relations:
+    connectedTo:
+      min_count: 2      # pipe on both sides of valve
+    partOfSystem:
+      min_count: 1      # assign to a system/loop when possible
+
+Fan:
+  relations:
+    connectedTo:
+      min_count: 2      # upstream + downstream duct/air path
+    drivenBy:
+      min_count: 1      # motor or drive
+    partOfSystem:
+      min_count: 1
+
+Motor:
+  relations:
+    powers:
+      min_count: 1      # should power something (fan, pump, etc.)
+    mountedOn:
+      min_count: 1      # optional, but often mounted on frame/equipment
+
+Duct:
+  relations:
+    connectedTo:
+      min_count: 2      # duct segments or terminals on each end
+    supportedBy:
+      min_count: 1      # hanger, structure, ceiling, etc. (if you model this)
+    partOfSystem:
+      min_count: 1
+
+Damper:
+  relations:
+    connectedTo:
+      min_count: 2      # duct on both sides of the damper
+    partOfSystem:
+      min_count: 1
+
+Pipe:
+  relations:
+    connectedTo:
+      min_count: 2      # segment continuity
+    partOfSystem:
+      min_count: 1
+
+Boiler:
+  relations:
+    partOfSystem:
+      min_count: 1      # HW system
+    connectedTo:
+      min_count: 2      # supply/return piping
+    locatedIn:
+      min_count: 1      # mechanical room/space
+
+Chiller:
+  relations:
+    partOfSystem:
+      min_count: 2      # e.g., chilled water + condenser water systems
+    connectedTo:
+      min_count: 4      # CHWS, CHWR, CWS, CWR (or equivalent)
+    locatedIn:
+      min_count: 1
+
+AHU:  # Air Handling Unit
+  relations:
+    partOfSystem:
+      min_count: 1
+    connectedTo:
+      min_count: 3      # supply duct, return/relief, coil piping, etc.
+    locatedIn:
+      min_count: 1
+
+TerminalUnit:  # VAV, FCU, etc.
+  relations:
+    partOfSystem:
+      min_count: 1
+    connectedTo:
+      min_count: 2      # upstream duct/piping + downstream diffuser/zone
+    servesSpace:
+      min_count: 1      # at least one zone/room
+
+Sensor:
+  relations:
+    monitors:
+      min_count: 1      # some equipment/space/system
+    partOfSystem:
+      min_count: 1
+    locatedIn:
+      min_count: 1

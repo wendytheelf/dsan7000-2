@@ -105,7 +105,7 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
         resp = requests.post(
             "http://127.0.0.1:11434/api/generate",
             json=payload,
-            timeout=120,
+            timeout=600,
         )
         resp.raise_for_status()
         data = resp.json()

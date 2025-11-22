@@ -1,0 +1,88 @@
+asset_id,relation,direction,neighbor_class,neighbor_name,neighbor_uid
+b73089e2-ddc5-5685-83b1-90a3703b0382,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+6e9a5f25-41c9-5e06-ad10-b978bc041f3b,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcSlab,house - roof - slab left,IfcSlab-0ZTBBPo6f6bxqV2K7Oelrq
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcSlab,house - roof - slab right,IfcSlab-12UVOn4wvAJPMUExKdZLb8
+e2f94cf4-009e-5206-8075-e6f8eecc196b,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+40f07bd3-cf13-5a40-9b24-79dfff96626e,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+69e143da-7417-56b9-a331-4fe5afcd61f1,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+e51b7094-ee65-52cf-8f8c-6c31b3dca2b9,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+94415f09-6e4a-5ff2-931e-6f94670f55a6,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+3337194f-1b79-5b47-9349-4ca99727faad,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+07a97583-6e4e-555a-8528-514ff8e1a3f8,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+2712f229-45ca-50c9-b37c-9ebddeeb5a64,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+35d820e8-f929-5abe-88c7-ab209c1f020d,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+71961636-f512-5293-bdab-b41db35ab907,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+d6977c35-f1fd-54af-a8e5-74659b436fe6,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+5e127ea1-4fc2-58e6-a4a4-1570a3ab2c80,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+4624633a-7ff0-5d4e-a4a0-4123233118e0,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-0fqX614OH1YO1Njdxms2$Q
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-0rh7bRO0L9fg1NzgGKU$Ut
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-3roxUKbVv98xiUcl22_T07
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-0Lvk$Qa81D5et3l3a4S9Vk
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-2ddLgAnQf4mBfh5IpUp54U
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcBeam,girder,IfcBeam-2fjJuPht9EIQaZQYZfC1Op
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcDiscreteAccessory,beam shoe,IfcDiscreteAccessory-2r_8UEywH9_RLHe8z$Xa8J
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,Aggregates,down,IfcDiscreteAccessory,beam shoe,IfcDiscreteAccessory-2cc4uJUVv5BevbidUpn1H3
+604d45bb-1499-5fde-9c53-d43bf79bbae4,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+00d1b950-f44c-51a2-9527-743a7edd4a09,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+fa131d94-af27-58a2-9eaa-f07bf3c75c1a,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+bf8a20ac-6837-58d7-8f04-ec9e3d06479f,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
+dd404b51-0c16-5e89-9b21-b9c8769ffd51,ContainedIn,up,IfcBridgePart,road rail bridge - approach,IfcBridgePart-04kO$szQnDTAhzkZMdfItT
+bfc0397f-14bf-573d-95ac-e50634284337,ContainedIn,up,IfcBridgePart,road rail bridge - approach,IfcBridgePart-2LBqtx8tXFcR8Qzu5tSZdh
+0a6453d4-2a5a-5b5a-831e-849b93c2efbf,ContainedIn,up,IfcBridgePart,road rail bridge - deck,IfcBridgePart-2r51NsY5P0QvEz_Kok7DQt
+45f68ad8-dfc2-55d8-b0e2-7829afa423a3,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0kTVfaOTj2pAN_WvUgOEdD
+f4f96304-b0a3-5a79-b596-c501acb47373,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0qDQIJzHH719PVQZWdQqW2
+16f4681c-1684-5ad0-ac99-2543cffd9c51,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0vFQAzqYzD2P8vJwFIDXrV
+d2367fa7-43ec-516a-a9f4-5baa6165ff68,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-2qHgQrSEbBmAN2Nh3C6_X0
+f41169ad-3017-51f4-bee9-5e8a159536e5,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-2hJMDFMXH0q8k_DMRtOb0x
+f1cb73e8-7d36-571c-9ac2-9ed1e26ccac6,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-3UNm72MkH81wf0YgrOuk7D
+1e338b47-26f9-501f-a67c-13f65b47a96a,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-0ZqHhx84T54vsUjUWpHX1r
+1dfbcf63-b717-55b9-941a-6abcb95655bd,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0kTVfaOTj2pAN_WvUgOEdD
+87ed24c5-bdff-5733-8956-12071e24d10b,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0qDQIJzHH719PVQZWdQqW2
+d4661d9b-73c4-594f-9de2-2c660fc8d3d1,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0vFQAzqYzD2P8vJwFIDXrV
+63c9fbf8-57f4-5885-b11b-4e1f442e1f85,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-2qHgQrSEbBmAN2Nh3C6_X0
+9aa075ed-dbf3-5b8d-aada-379831cc577f,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-2hJMDFMXH0q8k_DMRtOb0x
+9f639363-e275-5422-b9c6-06c4d88fd08b,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-3UNm72MkH81wf0YgrOuk7D
+2ed923c4-157e-50ad-9305-c906d6b5e37f,ContainedIn,up,IfcBridgePart,rail bridge - pier,IfcBridgePart-0ZqHhx84T54vsUjUWpHX1r
+6de95f5c-2842-5bb1-afeb-904b9ae063e1,ContainedIn,up,IfcBridgePart,bridge road - abutment,IfcBridgePart-2x$zQFzGD8YBtZ$7H7nm4c
+83f51216-ad4c-537e-b37f-88fdd4a8ec1f,ContainedIn,up,IfcBridgePart,bridge road - abutment,IfcBridgePart-2cU43jXGXEuv4mx7hSZu3S
+472e4f9c-8c70-5296-ae35-59e5b70b8d72,ContainedIn,up,IfcBridgePart,road rail bridge - superstructure,IfcBridgePart-2F86AY9Dn33gptJs5BIFJi
+5d313555-184b-5aed-b54e-b87e41bbc01d,ContainedIn,up,IfcBridgePart,road rail bridge - superstructure,IfcBridgePart-2F86AY9Dn33gptJs5BIFJi
+1faa9037-4bcc-5fa6-a8a3-3194b4816063,ContainedIn,up,IfcBridgePart,road rail bridge - superstructure,IfcBridgePart-2F86AY9Dn33gptJs5BIFJi
+fc0196ec-cbe1-57a3-a098-47ca7102bb65,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0kTVfaOTj2pAN_WvUgOEdD
+cadfad0b-b4b2-568b-ad14-d6ded6bc6f1f,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0qDQIJzHH719PVQZWdQqW2
+a8f47ac7-3b81-5d8d-b40f-6d447c9589aa,ContainedIn,up,IfcBridgePart,road river bridge - pier,IfcBridgePart-0vFQAzqYzD2P8vJwFIDXrV
+42852903-eb25-530a-ab90-7d91e3a69af4,ContainedIn,up,IfcBridgePart,railbridge - superstructure,IfcBridgePart-0NGju11I55eP2T$y1Bu15n
+33da0650-8a3e-590b-8c7c-091f703cdf81,ContainedIn,up,IfcBridgePart,railbridge - superstructure,IfcBridgePart-0NGju11I55eP2T$y1Bu15n
+6944da49-e971-5dbc-9548-1582118fa032,ContainedIn,up,IfcBridgePart,railbridge - superstructure,IfcBridgePart-1hMPjN1XP3D8IpowtvIj0R
+949323d6-402a-5138-bed0-3085fb4db2ac,ContainedIn,up,IfcBridgePart,railbridge - superstructure,IfcBridgePart-1hMPjN1XP3D8IpowtvIj0R
+5fd628f9-2bb1-5ab3-80bd-9fbb4fe726ad,ContainedIn,up,IfcBridgePart,road rail bridge - deck,IfcBridgePart-2r51NsY5P0QvEz_Kok7DQt
+6bc94901-5dd2-5634-b618-745fa1bb98fd,ContainedIn,up,IfcBridgePart,road rail bridge - deck,IfcBridgePart-2r51NsY5P0QvEz_Kok7DQt
+cc407e00-55a5-5aff-9a3b-415cab6f39d3,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+ef1c1ad7-6a40-5a77-a9e0-0c305ea44970,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+d6d48679-69cc-5969-9b2b-b4800e3cbe80,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+688596f8-49f6-5504-b899-bc749577dcb1,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+92fff777-c6b4-568d-8290-c7407684c7a5,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+3a185042-e8c1-5ed1-b8c0-a566ea45389b,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+29b0c1ae-294b-5c65-889e-c43b8a9497b3,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+e4877e0a-552a-5d6b-8465-5eb84476ce77,ContainedIn,up,IfcSite,road parking - site,IfcSite-1adp27B_9CUfup2ojuKOng
+7c2e9bd7-baaa-529a-a012-c61798b1e96d,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+3f654c39-a53a-5df6-963d-e2f45bb4355b,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+60d85130-fb34-548b-bf42-735c96ca157c,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+9e138146-8365-53de-9cb5-148593228cbe,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+3e459c0b-9aef-5b08-a60e-f13d4f5cf8b2,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+583136cf-980e-5c9b-8135-6cb9f8e8ed15,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+a6a31fcd-a863-55c2-9930-331ce3dc3b7c,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+e8e7b498-fa61-5f4d-8f43-b6f1be865f58,ContainedIn,up,IfcSite,road rail bridge - site,IfcSite-1$CApj9YLCeu0YyH5TXRVh
+d5b5acca-cd7d-5f81-bad6-f0bc50aa7dce,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+11875ac0-acb0-5729-a0b0-97c6843153b3,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+539f60a0-d750-5d14-9a18-8e0232f8da48,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+c01b58fd-47cc-58ad-9fcb-5713c1009a66,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+e352e020-8d16-59ff-997b-f4bd862608f2,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+1e19932f-8aa1-54c3-a853-63c70210e929,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+a8a3770d-5ee5-5279-a65b-6749cca06da1,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS
+c0706438-62d1-53ac-9f7f-8eda20a1ff1a,ContainedIn,up,IfcSite,road - site,IfcSite-2syxA9_lr7Ew2uZai3VhhS

@@ -1,6 +1,92 @@
+# Global property ranges (applies to all classes if not overridden)
 flow_rate:
-  min: 0.01
-  max: 500.0    # L/s
+  min: 0.01         # L/s
+  max: 500.0        # L/s
+
 power:
-  min: 0.05
-  max: 2000.0   # kW
+  min: 0.05         # kW
+  max: 2000.0       # kW
+
+pressure:
+  min: 0.0          # kPa
+  max: 2000.0       # kPa
+
+temperature:
+  min: -40.0        # °C
+  max: 150.0        # °C
+
+diameter:
+  min: 5.0          # mm (will be normalized to m)
+  max: 2000.0       # mm
+
+Width:
+  min: 1.0        # mm，或你 normalized 後的單位
+  max: 2000.0
+
+NetSideArea:
+  min: 0.1        # m²
+  max: 500.0
+
+# Class-specific ranges (overrides global ranges)
+Pump:
+  flow_rate:
+    min: 0.1        # L/s
+    max: 500.0      # L/s
+  power:
+    min: 0.1        # kW
+    max: 1000.0     # kW
+  pressure:
+    min: 10.0       # kPa
+    max: 1500.0     # kPa
+
+Valve:
+  diameter:
+    min: 5.0        # mm
+    max: 1000.0     # mm
+
+Fan:
+  flow_rate:
+    min: 0.05       # L/s
+    max: 200.0      # L/s
+  power:
+    min: 0.05       # kW
+    max: 500.0      # kW
+
+Duct:
+  height:
+    min: 50.0       # mm
+    max: 2500.0     # mm
+  width:
+    min: 50.0       # mm
+    max: 2500.0     # mm
+
+Pipe:
+  diameter:
+    min: 10.0       # mm
+    max: 800.0      # mm
+
+Boiler:
+  power:
+    min: 5.0        # kW
+    max: 5000.0     # kW
+  temperature:
+    min: 20.0       # °C
+    max: 120.0      # °C
+
+Chiller:
+  power:
+    min: 10.0       # kW
+    max: 5000.0     # kW
+  flow_rate:
+    min: 0.5        # L/s
+    max: 2000.0     # L/s
+
+AHU:
+  flow_rate:
+    min: 0.5        # L/s
+    max: 5000.0     # L/s
+
+TerminalUnit:
+  flow_rate:
+    min: 0.01       # L/s
+    max: 500.0      # L/s

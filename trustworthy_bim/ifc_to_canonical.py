@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import uuid
 import re
+import random
 
 # ---------- Setup logging ----------
 logging.basicConfig(
@@ -144,6 +145,10 @@ def _canon_kind(name: str) -> str:
     if n.endswith("_m") or "(m)" in n: return "length"
     if n.endswith("_cm"): return "length"
     if n.endswith("_ft") or "(ft)" in n: return "length"
+    # Additional length/distance properties
+    if n in ["perimeter", "invertelevation", "span"]: return "length"
+    if "offset" in n and not "angle" in n: return "length"
+    if "height" in n or "depth" in n or "width" in n or "length" in n or "thickness" in n: return "length"
     if "area" in n: return "area"
     if "volume" in n: return "volume"
     if "pressure" in n: return "pressure"
@@ -155,6 +160,12 @@ def _canon_kind(name: str) -> str:
     if "current" in n: return "current"
     if "frequency" in n: return "frequency"
     if "percent" in n or n.endswith("_pct"): return "percent"
+    # Angle properties
+    if n in ["pitchangle", "slope", "roll", "angle"]: return "angle"
+    if "angle" in n: return "angle"
+    # Thermal properties
+    if n in ["thermaltransmittance", "heat transfer coefficient (u)", "u-value", "u_value"]: return "thermal_u"
+    if n in ["thermal resistance (r)", "thermal resistance", "r-value", "r_value"]: return "thermal_r"
     return "unknown"
 
 def normalize_unit(name: str, value, unit: Optional[str], unit_overrides: Dict[str, Any] | None = None):
@@ -242,7 +253,7 @@ def normalize_unit(name: str, value, unit: Optional[str], unit_overrides: Dict[s
         if u == "BTU/h": return v*0.00029307107, "kW", "BTUh_to_kW"
         return v, u, "power_noop"
 
-    # Voltage / Current / Frequency / Percent / Angle
+    # Voltage / Current / Frequency / Percent
     if kind == "voltage":
         return v, "V" if (not u or str(u).lower()=="v") else u, "ok"
     if kind == "current":
@@ -253,8 +264,34 @@ def normalize_unit(name: str, value, unit: Optional[str], unit_overrides: Dict[s
         if 0 <= v <= 1 and (u is None or u==""):
             return v*100.0, "%", "fraction_to_percent"
         return v, "%" if not u else u, "ok"
+    
+    # Angle -> degrees
     if kind == "angle":
-        return v, "deg" if (not u) else u, "ok"
+        if not u or u.lower() in ["deg", "degree", "degrees", "°"]:
+            return v, "deg", "ok" if u else "assume_deg"
+        u_lower = str(u).lower()
+        if u_lower in ["rad", "radian", "radians"]:
+            return v * 57.295779513, "deg", "rad_to_deg"
+        return v, u, "angle_noop"
+    
+    # Thermal properties
+    # ThermalTransmittance (U-value) -> W/(m²·K)
+    if kind == "thermal_u":
+        if not u or u.lower() in ["w/(m²·k)", "w/(m2·k)", "w/(m²k)", "w/(m2k)", "w/m²k", "w/m2k"]:
+            return v, "W/(m²·K)", "ok" if u else "assume_W_per_m2K"
+        u_lower = str(u).lower()
+        if u_lower in ["btu/(h·ft²·°f)", "btu/(h·ft2·°f)", "btu/(h·ft²·f)", "btu/(h·ft2·f)"]:
+            return v * 5.678263337, "W/(m²·K)", "btu_to_W_per_m2K"
+        return v, u, "thermal_u_noop"
+    
+    # Thermal Resistance (R-value) -> m²·K/W
+    if kind == "thermal_r":
+        if not u or u.lower() in ["m²·k/w", "m2·k/w", "m²k/w", "m2k/w", "m²·k/w", "m2·k/w"]:
+            return v, "m²·K/W", "ok" if u else "assume_m2K_per_W"
+        u_lower = str(u).lower()
+        if u_lower in ["ft²·h·°f/btu", "ft2·h·°f/btu", "ft²·°f·h/btu", "ft2·f·h/btu"]:
+            return v * 0.1761101838, "m²·K/W", "ft2Fh_to_m2K_per_W"
+        return v, u, "thermal_r_noop"
 
     return v, u, "noop"
 
@@ -269,23 +306,97 @@ def validate_required(props_flat: Dict[str, Any], required: List[str]) -> List[s
             missing.append(k)
     return missing
 
-def validate_ranges(prop_name: str, value_norm: Optional[float], ranges: Dict[str, Any]) -> Optional[str]:
+def check_ranges(props_rows, range_table):
+    flags = []
+    for p in props_rows:
+        name = p["name"]
+        v = p.get("value_norm")
+
+        # 1) 通用規則：所有數值不可以 < 0
+        if isinstance(v, (int, float)) and v < 0:
+            flags.append(("NEGATIVE_VALUE", f"{name}={v} < 0"))
+
+        # 2) 如果有在 ranges.yaml 裡，就再做 min/max 檢查
+        if name in range_table:
+            lo = range_table[name].get("min")
+            hi = range_table[name].get("max")
+            if isinstance(v, (int, float)):
+                if (lo is not None and v < lo) or (hi is not None and v > hi):
+                    flags.append(("OUT_OF_RANGE", f"{name}={v} not in [{lo},{hi}]"))
+    return flags
+
+def validate_ranges(prop_name: str, value_norm: Optional[float], ranges: Dict[str, Any], canonical_class: Optional[str] = None) -> Optional[str]:
+    """
+    Validate property value ranges.
+    Supports two formats:
+    1. Global format: {prop_name: {min: X, max: Y}}
+    2. Class-specific format: {canonical_class: {prop_name: {min: X, max: Y}}}
+    
+    Class-specific ranges override global ranges.
+    """
     if value_norm is None: return None
-    r = ranges.get(prop_name) if ranges else None
-    if not r: return None
+    r = None
+    
+    # First, check for class-specific ranges
+    if canonical_class and ranges.get(canonical_class):
+        class_ranges = ranges.get(canonical_class)
+        if isinstance(class_ranges, dict) and prop_name in class_ranges:
+            r = class_ranges.get(prop_name)
+    
+    # Fallback to global ranges
+    if r is None:
+        r = ranges.get(prop_name) if ranges else None
+    
+    if not r or not isinstance(r, dict): return None
     mn = r.get("min"); mx = r.get("max")
     if mn is not None and value_norm < mn: return f"value {value_norm} < min {mn}"
     if mx is not None and value_norm > mx: return f"value {value_norm} > max {mx}"
     return None
 
 def validate_neighbors(canonical_class: str, neighbors: List[Dict[str, Any]], neighbor_rules: Dict[str, Any]) -> Optional[str]:
+    """
+    Validate neighbor relations.
+    Supports two formats:
+    1. Simple format: {canonical_class: [class1, class2, ...]}
+    2. Advanced format: {canonical_class: {relations: {relation_type: {min_count: N}}}}
+    
+    Simple format: at least one neighbor class must be in the expected list.
+    Advanced format: check relation types and counts.
+    """
     if not canonical_class or not neighbor_rules: return None
-    expect = neighbor_rules.get(canonical_class)
-    if not expect: return None
-    # Simple check: at least one neighbor class is in the expected list
-    classes = [n.get("class") for n in (neighbors or [])]
-    if not any(c in expect for c in classes):
-        return f"expected any of {expect}, got {classes}"
+    rule = neighbor_rules.get(canonical_class)
+    if not rule: return None
+    
+    # Advanced format: {relations: {relation_type: {min_count: N}}}
+    if isinstance(rule, dict) and "relations" in rule:
+        relations_spec = rule.get("relations", {})
+        for rel_type, rel_rule in relations_spec.items():
+            if not isinstance(rel_rule, dict):
+                continue
+            min_count = rel_rule.get("min_count", 0)
+            if min_count <= 0:
+                continue
+            
+            # Count neighbors with this relation type
+            matching_neighbors = [
+                n for n in (neighbors or [])
+                if n.get("rel") == rel_type
+            ]
+            
+            if len(matching_neighbors) < min_count:
+                return f"relation '{rel_type}': expected at least {min_count}, got {len(matching_neighbors)}"
+        
+        # No issues found
+        return None
+    
+    # Simple format: [class1, class2, ...]
+    if isinstance(rule, list):
+        expect = rule
+        classes = [n.get("class") for n in (neighbors or [])]
+        if not any(c in expect for c in classes):
+            return f"expected any of {expect}, got {classes}"
+        return None
+    
     return None
 
 def validate_keywords(
@@ -490,15 +601,24 @@ def process_one_pack(
         out_rows_flags.append({"asset_id": asset_id, "flag": "LOW_AI_CONF", "reason": f"class_conf={class_conf}"})
 
     # - MISSING_REQUIRED_PROPERTY / OUT_OF_RANGE
-    required = (rule_required or {}).get(canonical) or []
-    missing = validate_required(
-        {k: merged_props.get(k, {}).get("value_norm") for k in merged_props}, required
-    )
-    for k in missing:
-        out_rows_flags.append({"asset_id": asset_id, "flag": "MISSING_REQUIRED_PROPERTY", "reason": k})
+    required = (rule_required or {}).get(canonical)
+    if required:
+        # Support both formats: list or dict with 'required' key
+        if isinstance(required, dict):
+            required_list = required.get("required", [])
+        elif isinstance(required, list):
+            required_list = required
+        else:
+            required_list = []
+        
+        missing = validate_required(
+            {k: merged_props.get(k, {}).get("value_norm") for k in merged_props}, required_list
+        )
+        for k in missing:
+            out_rows_flags.append({"asset_id": asset_id, "flag": "MISSING_REQUIRED_PROPERTY", "reason": k})
 
     for k, obj in merged_props.items():
-        msg = validate_ranges(k, obj.get("value_norm"), rule_ranges or {})
+        msg = validate_ranges(k, obj.get("value_norm"), rule_ranges or {}, canonical)
         if msg:
             out_rows_flags.append({"asset_id": asset_id, "flag": "OUT_OF_RANGE", "reason": f"{k}: {msg}"})
 
@@ -507,9 +627,15 @@ def process_one_pack(
     if msg:
         out_rows_flags.append({"asset_id": asset_id, "flag": "INCONSISTENT_NEIGHBOR", "reason": msg})
 
-    msg = validate_keywords(canonical, ent, keyword_rules or {})
-    if msg:
-        out_rows_flags.append({"asset_id": asset_id, "flag": "KEYWORD_MISMATCH", "reason": msg})
+    # Keyword validation is SOFT - only warns, doesn't block
+    # This is an addition, not a rule - meant to catch obvious inconsistencies
+    # The LLM should primarily use semantic reasoning, not keyword matching
+    if keyword_rules:
+        msg = validate_keywords(canonical, ent, keyword_rules)
+        if msg:
+            # Note: Could optionally disable this flag or make it INFO level
+            # For now, keep it but understand it's a soft check, not a hard rule
+            out_rows_flags.append({"asset_id": asset_id, "flag": "KEYWORD_MISMATCH", "reason": msg})
 
 # =========================
 # CLI
@@ -693,6 +819,7 @@ def main():
 
         review_rows.sort(key=review_sort_key)
 
+        # 寫出完整的 review_queue（全部資產）
         write_csv(outdir / "review_queue.csv", review_rows, [
             "asset_id",
             "ifc_class",
@@ -707,6 +834,26 @@ def main():
             "review_timestamp",
         ])
 
+        # 隨機抽樣 50 筆給人工審核使用
+        sample_size = 50
+        if len(review_rows) > sample_size:
+            review_sample = random.sample(review_rows, sample_size)
+        else:
+            review_sample = review_rows
+
+        write_csv(outdir / "review_queue_sample_50.csv", review_sample, [
+            "asset_id",
+            "ifc_class",
+            "name",
+            "canonical_class",
+            "class_confidence",
+            "flags",
+            "primary_flag",
+            "true_class",
+            "review_status",
+            "reviewer_notes",
+            "review_timestamp",
+        ])
 
         # stage report
         stage_report = {

@@ -1,0 +1,4 @@
+asset_id,source,local_id,ifc_class,name,canonical_class,class_confidence,class_codes,location_site,location_building,location_level,location_space,true_class,review_status,reviewer_notes,review_timestamp
+b73089e2-ddc5-5685-83b1-90a3703b0382,exp_init_no_retrieval,IfcSlab-3zR0BOEcLADRKln4HYporH,IfcSlab,floor,,0.0,{},,,,,,PENDING,,
+6e9a5f25-41c9-5e06-ad10-b978bc041f3b,exp_init_no_retrieval,IfcSlab-0ZTBBPo6f6bxqV2K7Oelrq,IfcSlab,house - roof - slab left,,0.0,{},,,,,,PENDING,,
+6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,exp_init_no_retrieval,IfcSlab-12UVOn4wvAJPMUExKdZLb8,IfcSlab,house - roof - slab right,,0.0,{},,,,,,PENDING,,

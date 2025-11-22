@@ -1,0 +1,4 @@
+asset_id,ifc_class,name,canonical_class,class_confidence,flags,primary_flag,true_class,review_status,reviewer_notes,review_timestamp
+b73089e2-ddc5-5685-83b1-90a3703b0382,IfcSlab,floor,,0.0,LOW_AI_CONF,LOW_AI_CONF,,PENDING,,
+6e9a5f25-41c9-5e06-ad10-b978bc041f3b,IfcSlab,house - roof - slab left,,0.0,LOW_AI_CONF,LOW_AI_CONF,,PENDING,,
+6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,IfcSlab,house - roof - slab right,,0.0,LOW_AI_CONF,LOW_AI_CONF,,PENDING,,

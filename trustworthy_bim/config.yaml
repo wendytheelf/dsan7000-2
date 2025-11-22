@@ -1,16 +1,9 @@
-# llm:
-#   provider: ollama
-#   base_url: "http://localhost:11434/v1"
-#   api_key: "ollama"
-#   model: "llama3:8b"
-#   temperature: 0.2
-#   max_tokens: 512
-
-
 # model:
-#   model: "qwen2.5:7b-instruct"  
-#   max_tokens: 512
-#   temperature: 0.0      # 0.0–0.2
+#   model: "llama3:8b"
+#   max_tokens: 256
+#   temperature: 0.0   # 可以之後再微調
+
+model: mock
 
 confidence_threshold: 0.75
 retrieval_top_n: 5

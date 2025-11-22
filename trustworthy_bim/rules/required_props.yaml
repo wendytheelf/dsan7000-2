@@ -1,2 +1,77 @@
-Pump: ["flow_rate", "power"]
-Fan:  ["flow_rate"]
+# required_props.yaml
+
+Pump:
+  - flow_rate
+  - power
+  - inlet_diameter
+  - outlet_diameter
+  - fluid_type
+
+Fan:
+  - flow_rate
+  - power
+  - speed
+  - installation_type    # e.g., inline, roof, AHU-internal
+
+Valve:
+  - diameter
+  - valve_type           # e.g., ball, globe, butterfly
+  - control_type         # e.g., manual, motorized
+  - fail_safe_position   # open/closed
+
+Duct:
+  - height
+  - width
+  - material
+  - system_type          # supply/return/exhaust/etc.
+
+Pipe:
+  - diameter
+  - material
+  - fluid_type
+  - insulation_thickness
+
+Boiler:
+  - power
+  - fuel_type
+  - efficiency
+  - max_pressure
+  - max_temperature
+
+Chiller:
+  - power
+  - cooling_capacity
+  - refrigerant_type
+  - efficiency
+
+AHU:
+  - airflow_rate
+  - supply_air_temperature
+  - return_air_temperature
+  - num_fans
+
+TerminalUnit:
+  - airflow_rate
+  - control_strategy      # e.g., VAV, CAV, PI control
+  - served_zone_id
+
+Sensor:
+  - measured_property     # temperature, pressure, flow, CO2, etc.
+  - range_min
+  - range_max
+  - location_reference    # space/equipment id
+
+Slabs:
+  - NetArea
+  - NetVolume
+
+Roof:
+  - Representation
+
+External walls (façade):
+  - NetSideArea
+  - Width
+
+Air Terminals / Grilles:
+  - flow_rate
+
