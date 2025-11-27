@@ -1,0 +1,166 @@
+# validation_rules.yaml
+# Rules for detecting incoherences and validation errors in BIM models
+# Based on Tier1 class definitions
+# Note: Relationship rules are in neighbor_rules.yaml
+# Note: IFC mappings are in class_maps.yaml
+
+Foundation_Slab:
+  definition: "Horizontal basal structural element transmitting building loads to the ground by surface"
+  
+  incoherences:
+    floating:
+      description: "Must have physical contact with the topographical surface"
+      severity: error
+    clash:
+      description: "Should not geometrically overlap with Piles (unless specific mixed system)"
+      severity: warning
+      exception: "Mixed foundation systems may have intentional overlap"
+
+Foundations_Piles+Footings:
+  definition: "Point load transmission (Footings) or deep transmission (Piles) of the structure to the terrain"
+  
+  incoherences:
+    alignment:
+      description: "Footing centroid must align with the Column axis (within tolerance)"
+      severity: error
+      tolerance: "Check alignment within acceptable construction tolerance"
+    hierarchy:
+      description: "A Pile must not exist without a capping element"
+      severity: error
+      hint: "Check whether Piles have associated Pile Cap or Footing"
+
+Slabs:
+  definition: "Flat horizontal structural element separating levels. If sloped, used to form structure of stair, ramp, or deck"
+  
+  incoherences:
+    watertight:
+      description: "Perimeter must reach the inner face of the External Wall"
+      severity: error
+    duplication:
+      description: "Must not occupy the exact same volume as a Beam"
+      severity: error
+    double_height_voids:
+      description: "Missing slab section is valid if Stair or Ramp occupies that void, or if tagged as 'Mezzanine'"
+      severity: info
+      hint: "Check whether there is a large IfcOpeningElement or whether there is a Stair or Ramp occupying that void. If there is a staircase, the void is mandatory."
+
+Columns:
+  definition: "Vertical structural element (Load: Compression)"
+  
+  incoherences:
+    floating_gap:
+      description: "A column that does not touch anything above or below is a critical error"
+      severity: error
+    transfer_columns:
+      description: "A column starting mid-air is VALID if it rests on a Transfer Beam (heavy structural beam)"
+      severity: info
+      hint: "Check whether the base of the pillar intersects with a reinforced Beam or Slab. If it touches a beam, it is valid."
+
+Beam:
+  definition: "Linear horizontal/inclined element that transfer their loads to the columns or walls. (Load: Flexion)"
+  
+  incoherences:
+    clash:
+      description: "Must not intersect Windows or Doors"
+      severity: error
+    headroom:
+      description: "Bottom face must not invade the clearance height of a Door"
+      severity: error
+    overlap:
+      description: "Must not fully overlap with Slabs (volume duplication)"
+      severity: error
+    cantilevers:
+      description: "A beam with one free end is VALID if the other end is fixed to a column/structure (Balconies)"
+      severity: info
+      hint: "Check whether the 'free' end is within the building boundaries or supports a slab. If the beam is continuous and passes over a pillar before going out into the air, the bending moment allows it. It is valid."
+    inverted_beams:
+      description: "Valid if projecting upwards above the slab level (to leave smooth ceilings underneath)"
+      severity: info
+      hint: "If the collision is complete on the Z axis but aligned, and the beam protrudes above, it is intentional."
+
+External walls (façade):
+  definition: "Vertical envelope separating interior/exterior of the building and provides thermal and acoustic insulation (thermal and acoustic boundary)"
+  
+  incoherences:
+    gaps:
+      description: "The perimeter must be closed (watertight)"
+      severity: error
+    clash:
+      description: "Must not pass through Columns (geometry collision)"
+      severity: error
+    curtain_walls:
+      description: "Valid if the wall passes 'in front' of the slab (continuous vertical surface) without being cut by the slab"
+      severity: info
+      hint: "Check whether the wall is IfcCurtainWall or IfcWall with glass/aluminium material. If so, the inner face of the wall is allowed to touch the outer face of the floor slab (tangential relationship, not destructive clash)."
+    parapets:
+      description: "Low walls on the Roof level do not need to reach a ceiling"
+      severity: info
+      hint: "If the wall is on the top floor (Roof Level) and its height is low (e.g. < 1.20m), it does not require a ceiling or upper floor slab."
+
+Internal walls:
+  definition: "Interior vertical dividers (Non-load bearing typically)"
+
+Floors:
+  definition: "Top walkable finish layer applied to the upper face of the slab"
+  
+  incoherences:
+    overlap:
+      description: "Two floor finishes cannot occupy the same space without layer definition"
+      severity: warning
+
+Ceilings:
+  definition: "Suspended interior finish beneath the slab or roof"
+  
+  incoherences:
+    conflict:
+      description: "Ceiling height must be higher than Window/Door lintels"
+      severity: error
+    continuity:
+      description: "Must not have unintentional holes (leakage risk)"
+      severity: warning
+    acoustic_islands:
+      description: "Discontinuous ceilings (gaps visible to the slab) are valid for specific design aesthetics"
+      severity: info
+      hint: "If the geometry is regular and centred, and there are no strange edge collisions, it is design."
+
+Roof:
+  definition: "Top building enclosure designed to protect the building from inclement weather (rain, sun)"
+  
+  incoherences:
+    continuity:
+      description: "Must not have unintentional holes (leakage risk)"
+      severity: error
+
+Doors:
+  definition: "Operable elements that allow the passage of people and are installed in vertical openings"
+  
+  incoherences:
+    orphan:
+      description: "A door without a wall is a critical error"
+      severity: error
+    blockage:
+      description: "Structural elements must not pass through the opening"
+      severity: error
+    clash:
+      description: "Frame/Glass should not intersect Columns"
+      severity: error
+    juliet_balconies:
+      description: "External doors higher than the outside floor level are valid"
+      severity: info
+      hint: "If IsExternal=TRUE, allow a positive tolerance in Z (e.g. +5 to +10cm) with respect to the finished interior floor level."
+    door_sills:
+      description: "Small geometric gaps (e.g., <5mm) from floor are acceptable tolerances"
+      severity: info
+
+Windows:
+  definition: "Glazed elements that allow for lighting and ventilation, installed in vertical openings"
+  
+  incoherences:
+    clash:
+      description: "Frame/Glass should not intersect Columns"
+      severity: error
+    floor_to_ceiling:
+      description: "Windows with Sill Height = 0 are valid (Storefronts, Curtain walls)"
+      severity: info
+      hint: "Do not flag as an error if the window height is > 2.00m (it behaves like a door visually)"
+

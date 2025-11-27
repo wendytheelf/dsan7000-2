@@ -1,4 +1,4 @@
-# ---- Canonical label 列表（照 mentor 提供；大小寫與空白都保留）----
+# ---- Canonical label ----
 allowed_classes:
   - Foundation_Slab
   - Foundations_Piles+Footings
@@ -59,23 +59,23 @@ allowed_classes:
   - Electric Boiler
   - Sink
 
-# ---- 直覺對映（不含細分；細分靠 keyword / PredefinedType）----
+# ---- IFC to Canonical Mapping (basic mapping; detailed classification via keyword/PredefinedType) ----
 ifc_to_canonical:
   IfcSlab: Slabs
   IfcRoof: Roof
-  IfcCovering: Ceilings    # 若 PredefinedType=CEILING → Ceilings；若=FLOORING → Floors（見 heuristic）
-  IfcWall: Internal walls  # 外牆/內牆靠名稱關鍵字再調整
+  IfcCovering: Ceilings    # If PredefinedType=CEILING → Ceilings; if=FLOORING → Floors (see heuristic)
+  IfcWall: Internal walls  # External/Internal walls adjusted by name keywords
   IfcDoor: Doors
   IfcWindow: Windows
-  IfcColumn: Columns (Concrete)    # 之後以關鍵字判斷 Steel/Concrete
+  IfcColumn: Columns (Concrete)    # Further classification by keywords to determine Steel/Concrete
   IfcBeam: Beam (Concrete)
   IfcRailing: Railings
   IfcStair: Stairs
   IfcCurtainWall: Curtain Panels
-  IfcFlowTerminal: Sink            # 包含多種端部件，暫以名稱判斷（Sink、Hose reel 等）
+  IfcFlowTerminal: Sink            # Contains various terminal components, classified by name (Sink, Hose reel, etc.)
   IfcSanitaryTerminal: Sink
   IfcBoiler: Electric Boiler
-  IfcSpace: Floors                 # 有些模型會把地坪當 Covering/Flooring/Space，暫給 Floors
+  IfcSpace: Floors                 # Some models use Space for floor finish, temporarily mapped to Floors
   IfcPlate: Base_Plate
   IfcMember: Reinforcing_Steel
   IfcCableCarrierSegment: Cable Tray
@@ -89,7 +89,7 @@ ifc_to_canonical:
   IfcAirTerminal: Air Terminals / Grilles
   IfcDamper: Dampers
   IfcValve: Valves
-  IfcFireSuppressionTerminal: Sprinkler   # 之後以名稱判斷 Extinguishers/Hose reel/Hydrant 等
+  IfcFireSuppressionTerminal: Sprinkler   # Further classification by name to determine Extinguishers/Hose reel/Hydrant, etc.
   IfcLightFixture: Lighting Fixture
   IfcLamp: Emergency lighting
   IfcSwitchingDevice: Switch (various types)
@@ -98,18 +98,18 @@ ifc_to_canonical:
   IfcSensor: Detector
   IfcElectricAppliance: Cameras
 
-# ---- 關鍵字啟發式（mock/LLM 輔助使用；若命中會覆蓋上面的粗略對映）----
+# ---- Keyword Overrides (for mock/LLM classification; overrides basic mapping if matched) ----
 keyword_overrides:
-  # 牆
+  # Walls
   External walls (façade): ["external", "façade", "facade", "exterior", "外牆"]
   Internal walls: ["internal", "partition", "內牆"]
 
-  # 板/樓地板/基礎
+  # Slabs/Floors/Foundations
   Foundation_Slab: ["foundation slab", "raft", "mat foundation", "基礎板", "base slab"]
   Floors: ["flooring", "finish floor", "地坪", "floor"]
   Roof: ["roof", "roof slab"]
 
-  # 材料細分
+  # Material Classification
   Columns (Concrete): ["concrete column", "rc column", "柱(混凝土)"]
   Column (Steel): ["steel column", "h-beam column", "柱(鋼)"]
   Beam (Concrete): ["concrete beam", "rc beam", "梁(混凝土)"]
@@ -135,3 +135,23 @@ keyword_overrides:
   Fire Alarm Control panel: ["fire alarm control panel", "f.a. panel", "fap"]
   Audible/visual discharge alarm: ["strobe", "sounder", "horn", "buzzer"]
   Cameras: ["camera", "cctv"]
+
+# ---- Keyword validation rules (for consistency checking) ----
+# These rules are used to validate that entity names/properties match expected keywords
+# Format: {class: {any: [required_keywords], none: [forbidden_keywords]}}
+keyword_validation:
+  Pump:
+    any: ["pump"]
+    none: ["valve", "radiator"]
+  
+  Valve:
+    any: ["valve"]
+    none: ["pump"]
+  
+  Wall:
+    any: ["wall"]
+    none: ["beam", "column"]
+  
+  Beam:
+    any: ["beam"]
+    none: ["wall"]

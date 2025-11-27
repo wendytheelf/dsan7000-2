@@ -20,7 +20,7 @@ diameter:
   max: 2000.0       # mm
 
 Width:
-  min: 1.0        # mm，或你 normalized 後的單位
+  min: 1.0        # mm, or normalized unit after conversion
   max: 2000.0
 
 NetSideArea:

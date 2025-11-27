@@ -1,7 +1,116 @@
 # Simple format (list) - supported for backward compatibility
 # Fan:  ["Duct","Damper","Motor"]
 
-# Advanced format (with relation types and min_count) - recommended for new rules
+# ============================================================================
+# Structural Elements - Tier1 Classes
+# ============================================================================
+
+Foundation_Slab:
+  relations:
+    supports:
+      min_count: 1      # supports Columns, Walls
+    restsOn:
+      min_count: 1      # rests on IfcSite (Terrain)
+    spatial:
+      description: "Defines the absolute lowest structural elevation"
+
+Foundations_Piles+Footings:
+  relations:
+    supports:
+      min_count: 1      # supports Columns
+    groupedUnder:
+      description: "Piles are usually grouped under a Pile Cap"
+      optional: true
+
+Slabs:
+  relations:
+    hosts:
+      min_count: 0      # physical base for Floors (optional but common)
+      description: "Physical base for Floors and anchor for Ceilings"
+    containsOpening:
+      description: "Contains IfcOpeningElement for stairs/shafts"
+      optional: true
+    connectsTo:
+      min_count: 1      # connects Foundation (bottom) to Beam/Slab (top)
+
+Columns:
+  relations:
+    restsOn:
+      min_count: 1      # must rest on Foundation, Slab, or Transfer Beam
+    supports:
+      min_count: 1      # supports Beams or Slabs above
+    continuous:
+      description: "Must be continuous vertically (load path)"
+
+Beam:
+  relations:
+    restsOn:
+      min_count: 1      # rests on Columns, other Beams or Load-bearing Walls
+    supports:
+      min_count: 0      # supports Slabs (optional but common)
+    definesLintel:
+      description: "Often defines door/window lintels"
+      optional: true
+
+External walls (façade):
+  relations:
+    containsOpening:
+      min_count: 0      # contains openings for Windows and External Doors
+    boundedBy:
+      min_count: 2      # limited by Slabs (top and bottom)
+    formsLoop:
+      description: "Must form a closed loop in plan view"
+    orientation:
+      description: "Normal vector must point outwards"
+
+Internal walls:
+  relations:
+    sitsOn:
+      min_count: 1      # sits on Slab
+    stopsAt:
+      min_count: 1      # stops at Ceiling or Slab above
+    definesSpace:
+      description: "Defines IfcSpace boundaries"
+
+Floors:
+  relations:
+    hostedBy:
+      min_count: 1      # strictly hosted by Slab top face
+    definesLevel:
+      description: "Defines 'Finished Floor Level' (FFL)"
+
+Ceilings:
+  relations:
+    hangsFrom:
+      min_count: 1      # hangs from Slab or Roof
+    createsPlenum:
+      description: "Creates space for MEP installations"
+      optional: true
+
+Roof:
+  relations:
+    restsOn:
+      min_count: 1      # rests on top structure (Columns/Beams)
+    requiresSlab:
+      description: "Must not float; requires a Slab underneath"
+      optional: true    # some roof types may not require slab
+    relatedToDrainage:
+      description: "Related to gutters/downspouts"
+      optional: true
+
+Doors:
+  relations:
+    fillsWall:
+      min_count: 1      # REQUIRES a Wall (RelFillsElement)
+    alignsWithFloor:
+      min_count: 1      # bottom must align with Floor (FFL)
+
+Windows:
+  relations:
+    fillsWall:
+      min_count: 1      # REQUIRES an External Wall (typically)
+
+# Additional relations 
 Pump:
   relations:
     partOfSystem:
