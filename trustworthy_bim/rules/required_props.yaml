@@ -75,3 +75,13 @@ External walls (façade):
 Air Terminals / Grilles:
   - flow_rate
 
+Beam (Concrete):
+  - Length
+  - NetVolume
+  - NetSurfaceArea
+
+Beam (Steel):
+  - Length
+  - NetVolume
+  - NetSurfaceArea
+

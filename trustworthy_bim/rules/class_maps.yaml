@@ -136,6 +136,7 @@ keyword_overrides:
   Audible/visual discharge alarm: ["strobe", "sounder", "horn", "buzzer"]
   Cameras: ["camera", "cctv"]
 
+
 # ---- Keyword validation rules (for consistency checking) ----
 # These rules are used to validate that entity names/properties match expected keywords
 # Format: {class: {any: [required_keywords], none: [forbidden_keywords]}}

@@ -27,6 +27,19 @@ NetSideArea:
   min: 0.1        # m²
   max: 500.0
 
+# Common beam geometry ranges (used when class-specific ranges missing)
+Length:
+  min: 0.05       # m   (≈ 50 mm after normalization)
+  max: 20.0       # m   (≈ 20000 mm)
+
+NetVolume:
+  min: 0.0001     # m³
+  max: 200.0      # m³
+
+NetSurfaceArea:
+  min: 0.01       # m²
+  max: 500.0      # m²
+
 # Class-specific ranges (overrides global ranges)
 Pump:
   flow_rate:
@@ -90,3 +103,26 @@ TerminalUnit:
   flow_rate:
     min: 0.01       # L/s
     max: 500.0      # L/s
+
+# Beam geometric ranges (for simulation testing)
+Beam (Concrete):
+  Length:
+    min: 0.1        # m  (≈100 mm)
+    max: 10.0       # m  (≈10000 mm)
+  NetSurfaceArea:
+    min: 0.01       # m²
+    max: 200.0      # m²
+  NetVolume:
+    min: 0.001      # m³
+    max: 50.0       # m³
+
+Beam (Steel):
+  Length:
+    min: 0.1
+    max: 10.0
+  NetSurfaceArea:
+    min: 0.01
+    max: 200.0
+  NetVolume:
+    min: 0.001
+    max: 50.0

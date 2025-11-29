@@ -1,4 +1,0 @@
-asset_id,relation,direction,neighbor_class,neighbor_name,neighbor_uid
-b73089e2-ddc5-5685-83b1-90a3703b0382,ContainedIn,up,IfcBuildingStorey,00 groundfloor,IfcBuildingStorey-1Ano2ZUxnEIvVQ_beukl8b
-6e9a5f25-41c9-5e06-ad10-b978bc041f3b,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8
-6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,ContainedIn,up,IfcBuilding,Single-family house,IfcBuilding-0c$N1CTon2BB2Sp89385G8

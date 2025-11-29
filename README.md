@@ -31,7 +31,7 @@ trustworthy_bim/
 │   ├── required_props.yaml # Required properties per class
 │   ├── ranges.yaml # Property value ranges (min/max)
 │   └── units_override.yaml # Unit conversion overrides
-├── review/ # Manual review logs and iterative feedback for validation improvements
+├── results/ # Visualizations and summary metrics (created by scripts)
 └── logs/ # System and evaluation logs
 
 ## How to run
@@ -200,6 +200,120 @@ To add rules for a new class:
 5. Add value ranges in `ranges.yaml` (if applicable)
 6. Add relationship rules in `neighbor_rules.yaml`
 7. Add validation rules in `validation_rules.yaml` (for structural elements)
+
+---
+
+## Simulation & Evaluation Scripts
+
+The project includes a small set of Python utilities (in addition to `ifc_to_canonical.py`) for **simulating errors** and **evaluating the rule-based validator** without relying on a real LLM:
+
+### 1. `trustworthy_bim/input/generate_simulated_errors.py`
+**Purpose**: Create two simulated datasets with injected errors starting from `uir_ground_truth.jsonl`.
+
+**Outputs**:
+- `uir_simulated_v1.jsonl` (~8% errors)
+- `uir_simulated_v2.jsonl` (~15% errors)
+
+**Error types injected**:
+- `wrong_class`: change `entity['tier_label']`
+- `out_of_range`: multiply selected numeric Beam properties by 1000×
+- `negative`: flip selected numeric Beam properties to negative values
+- `missing_prop`: delete selected Beam properties
+
+Each line also gets a `sim_error` field recording:
+- `has_error`, `error_type`, `field`, `original_value`, `true_class`
+
+### 2. Running the pipeline on simulated data
+
+Use the same canonicalization pipeline on ground truth and both simulated files:
+
+```bash
+cd /home/wendy/dsan7000-2
+
+python trustworthy_bim/ifc_to_canonical.py run \
+  --in trustworthy_bim/input/uir_ground_truth.jsonl \
+  --outdir trustworthy_bim/output_ground_truth \
+  --tolerant
+
+python trustworthy_bim/ifc_to_canonical.py run \
+  --in trustworthy_bim/input/uir_simulated_v1.jsonl \
+  --outdir trustworthy_bim/output_simulated_v1 \
+  --tolerant
+
+python trustworthy_bim/ifc_to_canonical.py run \
+  --in trustworthy_bim/input/uir_simulated_v2.jsonl \
+  --outdir trustworthy_bim/output_simulated_v2 \
+  --tolerant
+```
+
+This produces (per output dir): `assets.csv`, `asset_props.csv`, `asset_relations.csv`, `asset_flags.csv`, and `review_queue.csv`.
+
+### 3. `trustworthy_bim/input/compare_precision_by_class.py`
+**Purpose**: Compare **per-class precision/recall/F1** between:
+- Ground truth (`uir_ground_truth.jsonl`)
+- Simulated V1 (`uir_simulated_v1.jsonl`)
+- Simulated V2 (`uir_simulated_v2.jsonl`)
+
+**Output**:
+- Prints per-class precision table (V1 vs V2)
+- Writes `precision_comparison.json` for downstream plotting
+
+### 4. `trustworthy_bim/input/visualize_precision_comparison.py`
+**Purpose**: Plot **per-class precision** comparison for:
+- Ground truth (ideal, 100%)
+- Simulated V1 (~8% noise)
+- Simulated V2 (~15% noise)
+
+**Output**:
+- `results/visualizations/A_mapping_accuracy_comparison.png`
+
+### 5. `trustworthy_bim/input/evaluate_validator.py`
+**Purpose**: Evaluate how well the **rule-based validator** catches the injected errors (no LLM needed).
+
+For each simulated dataset, it:
+- Reads `sim_error` from the simulated JSONL
+- Reads `assets.csv` and `asset_flags.csv` from the corresponding outdir
+- Computes, per error type (`out_of_range`, `negative`, `missing_prop`):
+  - Injected count (ground-truth positives)
+  - Caught count (matching rule-based flags)
+  - TP / FP / FN / TN
+  - Precision / Recall / F1
+- Builds a row-normalized confusion matrix of `true_class` vs `canonical_class`
+
+**Usage**:
+
+```bash
+cd trustworthy_bim/input
+
+python evaluate_validator.py \
+  --sim_jsonl uir_simulated_v1.jsonl \
+  --outdir ../output_simulated_v1
+
+python evaluate_validator.py \
+  --sim_jsonl uir_simulated_v2.jsonl \
+  --outdir ../output_simulated_v2
+```
+
+This creates:
+- `uir_simulated_v1.validator_eval.json`
+- `uir_simulated_v2.validator_eval.json`
+
+### 6. `trustworthy_bim/input/plot_validator_metrics.py`
+**Purpose**: Visualize validator performance and class confusion using the `*.validator_eval.json` files.
+
+**Outputs** (in `results/visualizations/`):
+- `E_validator_recall_by_error_type.png`
+  - Bar chart of **recall (%) by error type** for each simulated dataset
+- `E_validator_class_confusion_simulated_v1.png`
+- `E_validator_class_confusion_simulated_v2.png`
+  - Heatmaps of **true_class vs predicted_class** (row-normalized, %)
+
+**Usage**:
+
+```bash
+cd trustworthy_bim/input
+python plot_validator_metrics.py
+```
 
 ---
 

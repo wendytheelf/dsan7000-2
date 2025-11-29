@@ -1,0 +1,1058 @@
+asset_id,flag,reason
+b73089e2-ddc5-5685-83b1-90a3703b0382,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+6e9a5f25-41c9-5e06-ad10-b978bc041f3b,MISSING_REQUIRED_PROPERTY,Representation
+6e9a5f25-41c9-5e06-ad10-b978bc041f3b,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,MISSING_REQUIRED_PROPERTY,Representation
+6b740cfe-05f4-5f54-9bf3-86f5e61aa2a4,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,MISSING_REQUIRED_PROPERTY,Representation
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+e2f94cf4-009e-5206-8075-e6f8eecc196b,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+40f07bd3-cf13-5a40-9b24-79dfff96626e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+69e143da-7417-56b9-a331-4fe5afcd61f1,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e51b7094-ee65-52cf-8f8c-6c31b3dca2b9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+94415f09-6e4a-5ff2-931e-6f94670f55a6,MISSING_REQUIRED_PROPERTY,flow_rate
+3337194f-1b79-5b47-9349-4ca99727faad,MISSING_REQUIRED_PROPERTY,flow_rate
+07a97583-6e4e-555a-8528-514ff8e1a3f8,LOW_AI_CONF,class_conf=0.5
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,MISSING_REQUIRED_PROPERTY,Representation
+08d7aac3-f2fc-50e2-88e0-579ada8c22a7,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+604d45bb-1499-5fde-9c53-d43bf79bbae4,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+00d1b950-f44c-51a2-9527-743a7edd4a09,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fa131d94-af27-58a2-9eaa-f07bf3c75c1a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+bf8a20ac-6837-58d7-8f04-ec9e3d06479f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+dd404b51-0c16-5e89-9b21-b9c8769ffd51,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+bfc0397f-14bf-573d-95ac-e50634284337,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+0a6453d4-2a5a-5b5a-831e-849b93c2efbf,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+45f68ad8-dfc2-55d8-b0e2-7829afa423a3,LOW_AI_CONF,class_conf=0.5
+f4f96304-b0a3-5a79-b596-c501acb47373,LOW_AI_CONF,class_conf=0.5
+16f4681c-1684-5ad0-ac99-2543cffd9c51,LOW_AI_CONF,class_conf=0.5
+d2367fa7-43ec-516a-a9f4-5baa6165ff68,LOW_AI_CONF,class_conf=0.5
+f41169ad-3017-51f4-bee9-5e8a159536e5,LOW_AI_CONF,class_conf=0.5
+f1cb73e8-7d36-571c-9ac2-9ed1e26ccac6,LOW_AI_CONF,class_conf=0.5
+1e338b47-26f9-501f-a67c-13f65b47a96a,LOW_AI_CONF,class_conf=0.5
+42852903-eb25-530a-ab90-7d91e3a69af4,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33da0650-8a3e-590b-8c7c-091f703cdf81,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6944da49-e971-5dbc-9548-1582118fa032,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+949323d6-402a-5138-bed0-3085fb4db2ac,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+55b7c5d4-cf47-5456-ab46-eda8a1e18e97,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+90977368-ea0d-56e4-b186-e5d611dec383,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c876d627-18a9-50ed-9c1e-b8d73dc3f895,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+7970d78b-adf3-5f9c-942d-fa2dbc8f04df,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+b9120fff-ecdf-50b9-8d6f-b057d600ba58,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+729e8b0c-f472-59a2-ac39-f4904f04f587,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+4804b632-2e38-50d2-8f97-91f8b4300357,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+18c26f40-ce1a-51cc-a562-6eae82c8a7e7,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+18c26f40-ce1a-51cc-a562-6eae82c8a7e7,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+77ac167f-2a62-5a46-8bc1-93e8371769a6,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+04de3e64-000e-500e-8664-b711869d30cf,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+04de3e64-000e-500e-8664-b711869d30cf,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+041af709-fc6a-53de-85e7-4298c12304fb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+cab793c4-8e31-587c-a846-d340bd4db792,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+cab793c4-8e31-587c-a846-d340bd4db792,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+41abd2dc-95a3-50e0-80e1-c250a9a83399,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+584d0758-94e4-525f-9837-5d30827630bc,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+584d0758-94e4-525f-9837-5d30827630bc,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+ecd0c922-304b-554d-80cf-08a46fbb79b1,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+33dd0072-cf37-5934-8e8d-749944350400,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+33dd0072-cf37-5934-8e8d-749944350400,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+91072adc-ba20-5d67-a0f4-16fbd8fad862,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+8478937c-2cb9-59c8-9480-5aafa15d74f3,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+8478937c-2cb9-59c8-9480-5aafa15d74f3,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+3c0117ce-b8f4-5966-8b99-3ee6a220f6eb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+bf4d4e83-3b86-5ebe-bf9c-4eefae40994a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+db756234-781a-5094-81a4-daa2c20826de,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+db756234-781a-5094-81a4-daa2c20826de,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+51e26b81-1814-5c4a-b7c8-c9e000697f4a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+f61551c1-399a-56e9-83e7-4d1926aa669b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+f61551c1-399a-56e9-83e7-4d1926aa669b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7162851c-d935-595b-b099-c3048b7bf4fa,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+56bd4c18-f34d-54c5-853b-035d215b7e6b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+56bd4c18-f34d-54c5-853b-035d215b7e6b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+e33f1d07-c68d-50fa-add5-71f812eb2125,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+20a35ee2-b2e6-5086-bd33-9bdbd47dbfdd,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+71b6216b-4fe7-58b9-b140-a2078bb1c09d,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+0737f580-3450-5f3f-9ad5-5c6dec22b7c8,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+f640e935-c92d-589e-80d7-62f3e6b89738,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+d391ce0f-3cbf-5ccd-a234-0a5d795a5f13,MISSING_REQUIRED_PROPERTY,Representation
+d391ce0f-3cbf-5ccd-a234-0a5d795a5f13,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+24ccde68-3e7c-58f8-806c-a8c0a7d73f8b,OUT_OF_RANGE,Width: value 6000.0 > max 2000.0
+24ccde68-3e7c-58f8-806c-a8c0a7d73f8b,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+909836e9-0034-5847-8820-d94e224e01ae,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+1418190a-323d-5cec-974b-d12961f53936,OUT_OF_RANGE,Width: value 25378.6733866024 > max 2000.0
+1418190a-323d-5cec-974b-d12961f53936,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7fecd1fd-e7f8-5d83-add0-9c19081dc83e,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+e6d1610b-53ce-54b9-9e12-7b2e9cd6aebe,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+e6d1610b-53ce-54b9-9e12-7b2e9cd6aebe,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+58470b1e-a574-5075-8907-6bf91d29eded,MISSING_REQUIRED_PROPERTY,Representation
+58470b1e-a574-5075-8907-6bf91d29eded,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+700ffd0d-5f16-52a7-8643-a9cdac180983,MISSING_REQUIRED_PROPERTY,Representation
+700ffd0d-5f16-52a7-8643-a9cdac180983,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+8e0f5c02-ac82-5a37-91aa-4f388c91c405,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+7f989472-dd8a-5071-87e8-5accee2de36d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+825f846d-83b6-56ac-971c-f9685b04bc12,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+21a0a271-a7ec-5121-95d8-05f86e6e7d5e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4acf14ef-8343-59dc-8719-25323c7b4f7e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+427bac16-74ca-58f8-a77b-ed18f85955c3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+023673e1-f2d7-5d71-b44f-82fffb718cdc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+414f99a2-2c8f-59b9-8720-71dca9d67a54,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9104ccbd-6ff3-5ae8-acb7-a463258ed3b9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4b010c47-c97f-518b-b99c-b11a55a9a9d2,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+757213c1-3e1d-5b6c-b6a4-7b1649bbca1d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e22a259b-43e3-54e0-ba5c-7725271b2c5b,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+41b6b5b9-d511-5702-9348-e9d42d939ceb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2dd74aba-28b5-5d59-92af-72e2a57b327d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+03af1be9-360c-51cc-b465-c0f00b49b25c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+50cdaed1-1367-5321-894d-c5892883dc27,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6da3e5ab-7697-5796-981e-de4c891f9e2e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ad4476a0-f966-5966-9873-ac6d4c2686eb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0edab3b9-17d8-5f40-a153-39508357b86e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+573e075a-2da0-5263-9850-6674401cfce5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f5668ec3-8393-51a5-a233-e25f3b3a8276,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fbee5dc8-e5ca-58f6-9663-f9ce8ecc75c8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+611923b2-acc8-59d4-a2c9-fbbe3f3804c7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+cd207062-3b20-53f5-969a-a248f84a173e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+446c56de-4df2-5be2-8ff2-234f40d916f7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+989d11fd-20e4-53aa-806d-c76d4f6dacc3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+626ecedc-14d1-5551-bfeb-70a28c5d0bdb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0d0c2f52-bdcc-5891-bc00-bb9ed53f508a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ff6ef3fa-4c01-5e7d-b898-f0f6ebd0ae3d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b2032e52-4b84-542f-86a5-9301469a6e80,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9ca66d05-2eaf-589d-9414-2a3ded19dfef,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9aeceeab-2af5-5cae-8f02-eeba25289e17,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+03c75f8e-b952-5ab7-91f0-f8026f35f21a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+076a7c46-49ca-501e-beca-ce12c5144564,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+62bca7db-51ca-5603-b309-ecfcf9247ddf,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3b295237-399d-5d79-877c-2eaa8621e68c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ce8ad5d4-ce45-5f2f-ae3e-66eca1df04e8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+af879d2c-239f-574c-891b-0e30124b1a70,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4883ec95-c1f6-55c9-b6ca-2282a8f1fec0,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8ce86c7b-043c-5715-baa0-3b7502bc87c3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a265d75d-ca5e-5775-b087-d10863609bc9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+67e79c35-0a67-5e88-80c1-7857d036032e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c47b28e1-2264-5d1e-927e-cf3320c22e9e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f6b5dba6-4a5b-5fdc-945e-ec56b7d4b4d3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b659657c-79b6-5904-8027-eb1245a292c6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a3b27f82-1623-510a-beff-1cf577de7f8d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+29509f11-5555-5b00-bbe0-ba4799c291a3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f2314c27-541c-54bd-b47c-8e3a89133697,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c3d2ada3-f689-5adf-b026-817e7ce8167d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33a4c3b3-5aa7-5197-9ddd-94f71cc244c7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+23175fdd-5810-5b39-9de3-c44079836833,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a5d5bceb-5363-5254-a58e-d564e4fa2c26,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+575a2a96-49ee-5ddb-a1fc-335ee164cd89,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+faaec897-a601-55fb-b27a-28218f1bf170,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+fac6f866-70f3-5591-a6f4-aabd7739e4ad,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+1dd54ff5-bdf0-55c5-8a5b-a753b85f9721,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0d62fc02-3760-5221-974a-b266fa5cba8d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2887a583-2aab-54a4-95c1-f4a0574d182c,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+587cbae4-74a3-50e1-ac07-8ff7deb52f35,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+5354c58a-342d-5d8c-a2f9-68f638d6398b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2ec641d9-b360-5a30-ae69-f6b71dd84162,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+174c9839-e363-5a2f-9e9c-665040c51c0b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+629a45fc-9fb6-5bcf-96a5-0814dee738ae,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f5d71a7b-50ad-5fb9-afbb-b5d636137332,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+964d9930-6462-5806-b126-544a23ac5e15,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6ef6f782-b7a5-52cb-9e7f-69342ea6a33f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ecde91ee-d9fc-573f-b936-be07310d9478,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f66640aa-4d42-539a-81fd-a3606d4f9689,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d91b4613-b8ba-5601-850c-aa8f95484253,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c4e7bac4-0a35-5a04-8941-f04b0c27acf4,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+284e9f73-59d1-5f70-acba-d75c8c627ac2,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+616cf1e2-8287-5c60-a8bb-93a5299e6578,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a78f8960-f536-5235-8277-03ff4e4dd831,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6bbb0d72-2f3c-5db0-ab6f-924738b908fa,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a3925b97-6272-555c-a2c5-01a3d9bc9f60,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e859ed69-0ff3-5ce5-9be4-0c1bd74553f0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0bf171e7-c443-58df-b27a-6be5375f4194,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+10c6026e-fd5d-5e12-aa46-2fab6cb68347,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8be4ff35-e08b-54e6-b713-337f03e02a26,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+33c5a414-349b-5db4-8d36-2c5acdb106ee,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+62b20cec-a694-5750-a00a-10e206818f9f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+37582737-1f1d-586d-9552-42798139051f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c876d627-18a9-50ed-9c1e-b8d73dc3f895,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+7970d78b-adf3-5f9c-942d-fa2dbc8f04df,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+b9120fff-ecdf-50b9-8d6f-b057d600ba58,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+729e8b0c-f472-59a2-ac39-f4904f04f587,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+4804b632-2e38-50d2-8f97-91f8b4300357,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+18c26f40-ce1a-51cc-a562-6eae82c8a7e7,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+18c26f40-ce1a-51cc-a562-6eae82c8a7e7,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+77ac167f-2a62-5a46-8bc1-93e8371769a6,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+04de3e64-000e-500e-8664-b711869d30cf,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+04de3e64-000e-500e-8664-b711869d30cf,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+041af709-fc6a-53de-85e7-4298c12304fb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+cab793c4-8e31-587c-a846-d340bd4db792,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+cab793c4-8e31-587c-a846-d340bd4db792,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+41abd2dc-95a3-50e0-80e1-c250a9a83399,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+584d0758-94e4-525f-9837-5d30827630bc,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+584d0758-94e4-525f-9837-5d30827630bc,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+ecd0c922-304b-554d-80cf-08a46fbb79b1,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+33dd0072-cf37-5934-8e8d-749944350400,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+33dd0072-cf37-5934-8e8d-749944350400,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+91072adc-ba20-5d67-a0f4-16fbd8fad862,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+8478937c-2cb9-59c8-9480-5aafa15d74f3,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+8478937c-2cb9-59c8-9480-5aafa15d74f3,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+3c0117ce-b8f4-5966-8b99-3ee6a220f6eb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+bf4d4e83-3b86-5ebe-bf9c-4eefae40994a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+db756234-781a-5094-81a4-daa2c20826de,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+db756234-781a-5094-81a4-daa2c20826de,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+51e26b81-1814-5c4a-b7c8-c9e000697f4a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+f61551c1-399a-56e9-83e7-4d1926aa669b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+f61551c1-399a-56e9-83e7-4d1926aa669b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7162851c-d935-595b-b099-c3048b7bf4fa,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+56bd4c18-f34d-54c5-853b-035d215b7e6b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+56bd4c18-f34d-54c5-853b-035d215b7e6b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+e33f1d07-c68d-50fa-add5-71f812eb2125,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+20a35ee2-b2e6-5086-bd33-9bdbd47dbfdd,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+71b6216b-4fe7-58b9-b140-a2078bb1c09d,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+0737f580-3450-5f3f-9ad5-5c6dec22b7c8,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+f640e935-c92d-589e-80d7-62f3e6b89738,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+d391ce0f-3cbf-5ccd-a234-0a5d795a5f13,MISSING_REQUIRED_PROPERTY,Representation
+d391ce0f-3cbf-5ccd-a234-0a5d795a5f13,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+24ccde68-3e7c-58f8-806c-a8c0a7d73f8b,OUT_OF_RANGE,Width: value 6000.0 > max 2000.0
+24ccde68-3e7c-58f8-806c-a8c0a7d73f8b,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+909836e9-0034-5847-8820-d94e224e01ae,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+1418190a-323d-5cec-974b-d12961f53936,OUT_OF_RANGE,Width: value 25378.6733866024 > max 2000.0
+1418190a-323d-5cec-974b-d12961f53936,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7fecd1fd-e7f8-5d83-add0-9c19081dc83e,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+e6d1610b-53ce-54b9-9e12-7b2e9cd6aebe,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+e6d1610b-53ce-54b9-9e12-7b2e9cd6aebe,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+58470b1e-a574-5075-8907-6bf91d29eded,MISSING_REQUIRED_PROPERTY,Representation
+58470b1e-a574-5075-8907-6bf91d29eded,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+700ffd0d-5f16-52a7-8643-a9cdac180983,MISSING_REQUIRED_PROPERTY,Representation
+700ffd0d-5f16-52a7-8643-a9cdac180983,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+8e0f5c02-ac82-5a37-91aa-4f388c91c405,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+7f989472-dd8a-5071-87e8-5accee2de36d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+825f846d-83b6-56ac-971c-f9685b04bc12,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+21a0a271-a7ec-5121-95d8-05f86e6e7d5e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4acf14ef-8343-59dc-8719-25323c7b4f7e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+427bac16-74ca-58f8-a77b-ed18f85955c3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+023673e1-f2d7-5d71-b44f-82fffb718cdc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+414f99a2-2c8f-59b9-8720-71dca9d67a54,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9104ccbd-6ff3-5ae8-acb7-a463258ed3b9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4b010c47-c97f-518b-b99c-b11a55a9a9d2,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+757213c1-3e1d-5b6c-b6a4-7b1649bbca1d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e22a259b-43e3-54e0-ba5c-7725271b2c5b,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+41b6b5b9-d511-5702-9348-e9d42d939ceb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2dd74aba-28b5-5d59-92af-72e2a57b327d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+03af1be9-360c-51cc-b465-c0f00b49b25c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+50cdaed1-1367-5321-894d-c5892883dc27,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6da3e5ab-7697-5796-981e-de4c891f9e2e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ad4476a0-f966-5966-9873-ac6d4c2686eb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0edab3b9-17d8-5f40-a153-39508357b86e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+573e075a-2da0-5263-9850-6674401cfce5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f5668ec3-8393-51a5-a233-e25f3b3a8276,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fbee5dc8-e5ca-58f6-9663-f9ce8ecc75c8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+611923b2-acc8-59d4-a2c9-fbbe3f3804c7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+cd207062-3b20-53f5-969a-a248f84a173e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+446c56de-4df2-5be2-8ff2-234f40d916f7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+989d11fd-20e4-53aa-806d-c76d4f6dacc3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+626ecedc-14d1-5551-bfeb-70a28c5d0bdb,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0d0c2f52-bdcc-5891-bc00-bb9ed53f508a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ff6ef3fa-4c01-5e7d-b898-f0f6ebd0ae3d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b2032e52-4b84-542f-86a5-9301469a6e80,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9ca66d05-2eaf-589d-9414-2a3ded19dfef,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9aeceeab-2af5-5cae-8f02-eeba25289e17,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+03c75f8e-b952-5ab7-91f0-f8026f35f21a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+076a7c46-49ca-501e-beca-ce12c5144564,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+62bca7db-51ca-5603-b309-ecfcf9247ddf,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3b295237-399d-5d79-877c-2eaa8621e68c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ce8ad5d4-ce45-5f2f-ae3e-66eca1df04e8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+af879d2c-239f-574c-891b-0e30124b1a70,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4883ec95-c1f6-55c9-b6ca-2282a8f1fec0,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8ce86c7b-043c-5715-baa0-3b7502bc87c3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a265d75d-ca5e-5775-b087-d10863609bc9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+67e79c35-0a67-5e88-80c1-7857d036032e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c47b28e1-2264-5d1e-927e-cf3320c22e9e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f6b5dba6-4a5b-5fdc-945e-ec56b7d4b4d3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b659657c-79b6-5904-8027-eb1245a292c6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a3b27f82-1623-510a-beff-1cf577de7f8d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+29509f11-5555-5b00-bbe0-ba4799c291a3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f2314c27-541c-54bd-b47c-8e3a89133697,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c3d2ada3-f689-5adf-b026-817e7ce8167d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33a4c3b3-5aa7-5197-9ddd-94f71cc244c7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+23175fdd-5810-5b39-9de3-c44079836833,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a5d5bceb-5363-5254-a58e-d564e4fa2c26,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+575a2a96-49ee-5ddb-a1fc-335ee164cd89,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+faaec897-a601-55fb-b27a-28218f1bf170,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+fac6f866-70f3-5591-a6f4-aabd7739e4ad,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+1dd54ff5-bdf0-55c5-8a5b-a753b85f9721,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0d62fc02-3760-5221-974a-b266fa5cba8d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2887a583-2aab-54a4-95c1-f4a0574d182c,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+587cbae4-74a3-50e1-ac07-8ff7deb52f35,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+5354c58a-342d-5d8c-a2f9-68f638d6398b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2ec641d9-b360-5a30-ae69-f6b71dd84162,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+174c9839-e363-5a2f-9e9c-665040c51c0b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+629a45fc-9fb6-5bcf-96a5-0814dee738ae,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f5d71a7b-50ad-5fb9-afbb-b5d636137332,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+964d9930-6462-5806-b126-544a23ac5e15,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6ef6f782-b7a5-52cb-9e7f-69342ea6a33f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ecde91ee-d9fc-573f-b936-be07310d9478,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f66640aa-4d42-539a-81fd-a3606d4f9689,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d91b4613-b8ba-5601-850c-aa8f95484253,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c4e7bac4-0a35-5a04-8941-f04b0c27acf4,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+284e9f73-59d1-5f70-acba-d75c8c627ac2,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+616cf1e2-8287-5c60-a8bb-93a5299e6578,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a78f8960-f536-5235-8277-03ff4e4dd831,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6bbb0d72-2f3c-5db0-ab6f-924738b908fa,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a3925b97-6272-555c-a2c5-01a3d9bc9f60,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e859ed69-0ff3-5ce5-9be4-0c1bd74553f0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0bf171e7-c443-58df-b27a-6be5375f4194,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+10c6026e-fd5d-5e12-aa46-2fab6cb68347,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8be4ff35-e08b-54e6-b713-337f03e02a26,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+33c5a414-349b-5db4-8d36-2c5acdb106ee,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+62b20cec-a694-5750-a00a-10e206818f9f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+37582737-1f1d-586d-9552-42798139051f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+46c413a0-49b3-59a8-b1b8-644dc85cca96,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+3fd99eb9-8eea-53a4-9099-5c3ca730d0bc,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+36554544-90fc-54be-8021-d5083c7a2e36,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+d1c3ad36-bc90-5ac6-aaae-ee78629095c5,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+e4735e94-2048-52de-b63a-0fb6ff0dfa6f,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+7c0e6367-d58f-5f93-9ae7-bb45371c5684,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+3bbb9089-fc19-5f9d-94ee-8d56614d87aa,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+fc8312cf-15b7-5b71-af24-c122b9b2ad51,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+0e777838-d521-5ccf-801f-e269fabd77c3,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+2ab5937d-0ec1-58ee-8ae4-4501120da621,INCONSISTENT_NEIGHBOR,"relation 'connectsTo': expected at least 1, got 0"
+8e2ab015-6a77-57ea-a71a-4fc544a64c93,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+8c968eb6-9a57-5450-aa71-eed4e5c9e170,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+4bc766b4-911d-506b-95d5-8328dd348c28,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+0d207de5-e6db-5013-b85a-36470a927d57,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+e80fc83b-2242-557d-92f0-80e1067e4fa0,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+7fc41998-6370-54dd-bb39-01ffb2dce114,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+2df48cda-bf5e-5fec-a47c-cf66416b64a6,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+4613783b-ee91-5576-a460-4eca508b81cf,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+f6de66b2-f9ed-57f3-a650-b5f352212e6c,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+92757f53-2ac1-554a-8b1c-3614b2e52f1c,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+09fddc32-7634-565d-9f48-05a016cec9ec,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+857c2629-3fd8-597d-bb14-c350f10bd67b,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+c7f1979f-0299-50e0-b340-a02e32f1f2ed,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+3b6b44a7-1900-5927-85f7-b90e8e0602d3,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+515e51f4-aaa9-5b25-8ea5-374cfbf7f7ba,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+c8d83279-9fcf-5a2b-be83-93d42ea6f180,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+009b4768-6d18-5977-94d3-e2175426b013,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+ea65ff7a-c06f-531d-90c4-1066823d0aaf,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+f550fccf-a440-5141-b066-52163445d16c,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+93a84a74-fb9c-53fd-9adb-2d12986d10d1,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+44436de2-c317-531f-a1fc-2975c6e12eb0,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+a636ac4c-6423-5dbc-9653-d0896fa0847b,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+3ab6d9a6-1e8b-519f-b655-5c5cda1aa832,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+124d7ec0-3182-5355-a4ac-993f22f17ef3,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+6b0fb02c-9c2f-579c-accf-7b11c82318b8,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+dee16fde-2587-5224-babe-02617290f281,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+9a17029e-7f46-5b1c-93a9-d4209f2fcc69,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+1429fcd5-80a1-5d63-9b23-5af526c2f141,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+96a36243-48bb-55de-8fd2-c692edd98d0a,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+dd556c11-e353-5425-be89-49774e3f932a,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+4d43e012-55e9-506e-8252-7810bf687d96,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+9862b3c9-ea3c-5a52-9b6b-c21f12198acd,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+8d2889be-bb76-564d-a7d4-8ec8e7212963,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+ca667f55-bff9-5d05-93c1-35dccf73bd9b,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+070e748e-c76b-53be-b5f8-834ba6300e84,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+5953b117-ebb8-5b12-9081-99209085e8c7,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+dd8384d6-c554-5dc8-8320-5b913e269d66,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+299125ec-3ecc-51cc-82e3-95af7814a7c4,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+eb1fc658-c569-58cf-b231-a757fb7255e0,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+6acf4f19-ff5e-51a2-9efa-08ea574cbaa4,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+0b1b249c-86ca-50d1-b1c6-e1641fa807a1,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+e6956669-cb48-5870-bf94-680e49c78973,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+79d60f64-fab2-5053-8340-bece570fc76f,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+b4a04f6d-5e32-5b32-8f4d-a812f10cf39f,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+563ae61d-16ed-5274-9377-f20c4d178224,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+66a3fd20-ac79-5e84-9113-c141e425828a,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+70707659-af2d-5c2a-9ab6-2225c9a27dd2,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+f6e99f15-009c-5d8f-9c91-2a562979f599,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+87a9dddc-0062-541f-bd73-70ff07c2d76a,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+0b99862b-3224-5e90-b831-98d2e4ea64ed,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+57b37ef5-7336-5a62-839f-5e4c59ecddc1,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+7ba48f51-46e2-5aea-8814-a245d660b9ca,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+46678700-bf15-5bb1-866d-b2549d592965,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+e9a90fc1-df64-59b9-a472-cfa5e814b14a,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+a8597dd0-e9a5-570d-94c2-7fcb48288387,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+595ac74e-b481-56d0-994e-c7f2690920bb,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+c14a61df-1b20-545f-af2e-d0a6c0b69773,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+ad63270e-43d6-52b4-b6f8-5e14f206dc12,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+6518f4b6-7cea-54cb-b58a-8a72e21d7d60,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+878b53d3-eea1-51d0-8cd5-b57f3eee9fb5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8a012c12-3de8-5334-98a6-3dcc0e7f0667,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6017d19d-73e4-5342-9caf-0e047241c6c2,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+de55cc7b-9dde-53b4-8934-e7e449c997ff,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ecd415b1-94d9-5dac-8d2f-2f424462806b,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f7633ebb-6e0f-5470-98a6-2710d8ffa355,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+841a6343-5f98-57a3-ac61-9fa2df543840,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+debeb27f-5c3a-59f8-9cc2-ea5f892adb26,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c0c707d5-b8e0-5f22-be42-8b6a2758359d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4d94d0b6-9f1d-53c4-b83c-a78c37f5b629,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+096be317-9c60-54cb-a8ca-a3e61f543a47,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e5d1e81d-7482-5369-8246-11a53acae847,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e89a7088-1e33-56a6-ad16-74e9d70d24dc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+138554b7-ddae-505c-be5c-87a9e0781211,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3aca810d-4c2c-5411-9919-98f04fae81e7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+91d21d44-d8bc-5a93-a553-4814e5b31e3c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33fd2346-4a9b-596a-894c-b598dafdb6e0,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9a6b2849-d6bf-5839-b725-4cb2186a0abd,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+39a144c4-b498-57ea-aa11-5ea31deea5f9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+78e6b92f-9758-5a15-b29b-93110dbaf2d6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+cfef32f1-b4aa-5881-a408-035bbad4e493,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+13642f55-dcc1-587e-a807-808aeced5a68,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8950d1ce-af74-5328-a830-db7433ab3909,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+5ee15269-91ec-5316-a963-dd7dd0195d7f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+273f16ef-97e0-5bac-9e86-ec080b7eaf97,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+857f442d-6a59-5000-8f96-5ac095b8f18c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b6b189cc-2047-50db-a157-e665f417dae4,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+627ba258-10b5-59f8-baba-f116c74a029c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f1f87335-6d79-5bc4-a155-e41da245046c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8fec88e3-1f01-5401-ba27-6bf30869911f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+09cf8fa9-151a-5953-b9b2-b11dd24c4de9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+43b04e66-d8e4-562d-9b1c-ceedc0325329,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3f5ab2f0-d629-56bb-9f38-498539fe3a2a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+18085615-b271-5402-bf31-576b70a115af,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9d28517a-a00d-50d7-bc4a-b3a7293f6243,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a6c8ae03-f125-51d2-921a-de8873b8c31a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9e87f0c9-df14-5326-b541-e269158c95d9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+60d30792-9dc5-5a7d-a29d-442eb7b6b875,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0a91ff95-47f1-5c3a-a769-0825c4837d35,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+50422562-4c92-5150-bc76-9e7d145b2b18,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4e6cc8a0-e550-58d3-813f-f9169a6b52c4,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+68c87a8a-a9d9-59f2-a3d7-91a1290199aa,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2c0167c8-2b6c-5c69-898a-02c30bcc7add,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+7b60d00f-5ea7-59ae-af8a-aafb63b236fa,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+07078d4d-f256-5be6-95ef-f9c4067f2887,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1de513b3-b499-5c7f-8a93-1fb87abf2998,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9fc56849-1211-5ce1-bc08-bcb16fe31011,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a4fbad7f-63fe-5549-8c93-467c17044bf2,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6645d24f-9950-5840-acf4-c7e8ef7385f6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0e5584cb-3d36-50b4-a37e-f691eaaca251,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8cd23692-caae-55b6-88ca-be4810d435cf,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6ff66c39-6544-5c83-a355-d7e9cb405a97,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1eda786b-4608-5e8f-8e03-9f33588f2b42,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fef30ec7-9136-5287-a46f-1f6a8e8453e6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+28b7be47-3772-5e71-8ae9-961c2edc347c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9c1ed482-6028-5be1-845a-a87088bb1900,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c45173c3-3015-55c3-be7b-8c492252df6e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8d21e9f3-3ee3-54c6-9ad9-ba7ed9cfcda4,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8d8637b7-6171-5813-a267-0b5792ac6b07,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+02e98e07-a48c-51d8-8d08-c8391ca4aa8b,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ad115e82-6f30-5b5d-b659-be8945777731,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4b9dfb27-7150-599e-aafc-4fd3ad52bb97,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+07bb96aa-cf26-5801-82ff-e58f4203c6f9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+87b6103f-e0d4-533a-b57c-77be304600bc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c0c89733-6746-5bf8-869f-7236e01901a6,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+49272d45-eda0-55dd-80cf-a6452401c4d9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+51cd8b55-5b8a-56b5-9e17-301b9481785a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+43934714-c178-5f52-8adf-86d5445f964e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c9ab0550-7455-5998-b56f-d99468d9c06f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ba1a58b1-c949-535c-b701-0e1386e7f869,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+51895f8e-9413-5d8f-80f2-8e46fdcf7718,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8e192aad-9d8f-5102-821a-632399a76214,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b47635e5-1d0c-548c-a0d3-2e57b4e9502c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0c5229c1-a34d-509a-b911-b0780084e148,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0b4fc5d0-0a31-5304-b823-e5d679e2e298,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a6311c87-6102-55e4-97d0-e576a343df10,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1965de26-582e-55d9-b265-bfd8517f558d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e8261c2f-3142-5521-a02f-22cbb16e6c3a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+60977c88-534b-5807-8890-1151d02d4d0d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fd869ad8-b014-5caa-a64a-b321e22f9f59,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4214d053-09fa-54db-8cfb-02d9aa74d2ed,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f7a1c87e-ec61-5df1-9cb0-40b640ea0d5f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+82b7c418-f35c-541a-aa75-73d04d55a995,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f692fabd-f874-5c0b-be48-8856680e40e5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+d5299c7b-e998-59d8-b6f5-d784f77b2591,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+82c501b2-4ca4-51ad-aa33-8efa4264b578,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+942402eb-211d-5ef5-b791-f82cfa727186,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+51ecb686-767d-5063-91a6-8e4f3e2a48a0,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f2b4b3d2-5255-536d-9f39-61052a503449,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a47b8b32-8533-5e1f-81ec-8c39249a2b3c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3f9aaf4c-f7a9-5d82-9a8e-cc2de705e139,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+0383fba9-d1de-5c29-b888-64d5aded9d11,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a453418e-6159-59ae-a731-a540ffe109a8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1a7dc6b3-4791-5c62-92ca-52df0061d6dc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+3a60de9e-a689-57c6-82e6-453a8a17bc75,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e608e641-83a4-5002-a568-8c07c4194860,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2e0733d2-d641-5607-a539-7f728f38489c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f04300ab-cbe7-5fd7-ad8e-a3319edd4851,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+58f15374-5333-50ef-8376-dc3558473cae,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+bc58169f-988f-5ff3-a7f5-6c5e0e3f9a74,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a0993974-b005-5b3f-8a72-918b518e13a8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+382ceddc-0516-5de3-a8ee-cf0084aa5c4f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+bd9f9205-4dff-583d-9234-0a5ef6e016cc,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+ed7e36f2-da13-5a98-8d78-442f358346d2,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+af37ef3c-152b-5e94-b04c-1c6d4a9e2e48,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+75af2bc7-daff-549a-a2ab-8de7a182d089,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8a528be2-09f4-5c16-9ac1-e50efbceadd5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+29024bda-b443-52ea-8c98-ab8084c76949,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4bc63f6a-387c-5eec-a0a6-c366b41af68a,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+111bf0c5-78fc-5927-abd2-6d5cd0b3aee9,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1d7d8b2f-5d17-5b15-a5ea-6ae58091dfb8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2b15fde5-f86a-549a-980a-0d9e8ed26528,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2e3fe36f-71d7-5fb3-b1af-b815070bb6e3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+141e1f3c-9d00-553a-8df6-8e410a28d8be,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fae8ce79-1beb-5685-a165-76fc214a5623,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4b7ead5f-c6bf-5e0f-bc30-e4e1b2cea817,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+aaef9f9e-b812-5697-acbb-f7e62eab3885,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+14ffde2b-7ca3-51c5-8036-894ce29c132d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2e4b7067-01c6-5200-b56f-2a4537d3ef49,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4d1edb94-c869-544a-9f5d-094ecbf4135c,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+a73ef184-93d6-570e-978a-39d1c233ee08,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+7b90edc9-c777-5e93-bb23-95d5711dcd49,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+325c58a4-d448-5ed2-b1ea-598ece5980b3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b9d33bda-b0f9-50d1-8d74-1d939d7b73f5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2fbfd42a-1828-5225-aabe-62ae03c11804,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+d9c02afb-b401-5878-82e7-a7115e1f8e04,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6f20e68d-0260-5aa1-95fc-9485880ba741,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+1e249ef9-16fd-53e9-93f2-18045d3dbdce,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c160d438-e4d3-5eaf-89b3-a6eeff957690,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+16710dc6-d2b0-587d-8de8-66ed13ceb37d,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+4cc3e722-5dd9-5b07-8a88-42d366153ce1,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b245ad34-f120-5580-a25a-903482502dd7,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e959ff20-f9e7-581c-bbcd-b8934387a1e1,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3f1b7ef8-f7ae-5e46-9616-624aa44d7696,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+9b68f665-b0eb-5970-b0b5-8e6ca3bc7602,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+16c2c275-b871-59e8-bd25-4fa892edd087,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+1d5bd3f4-49d1-58ef-9173-76edd6ff2010,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+36eaee07-b6fe-54d1-9a99-7aa2732e441f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+98860462-db13-56db-b70b-147010e632cb,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+bf1f1e0c-846b-5fc8-8e40-2cc69e23b751,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+fce09964-3d2f-595c-b3d7-4792c31cb052,OUT_OF_RANGE,Width: value 2489.99999972643 > max 2000.0
+fce09964-3d2f-595c-b3d7-4792c31cb052,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c6c75196-e76b-5ff9-9245-40bc2209b8b2,OUT_OF_RANGE,Width: value 2062.24260550282 > max 2000.0
+c6c75196-e76b-5ff9-9245-40bc2209b8b2,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+df0c1e28-9bcc-5adf-902a-1833a570dcec,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e70b20eb-f1bf-5350-a313-8cdffe838e54,OUT_OF_RANGE,Width: value 2489.99999972643 > max 2000.0
+e70b20eb-f1bf-5350-a313-8cdffe838e54,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+24250d00-feb2-5077-a76c-3d1692d6c819,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3eb63092-2721-50b1-9672-04feece4194f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e77bdc63-c932-590c-b86f-3803056ac393,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+394c355d-6029-5aaf-95f8-52cc8bd8e01d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+776c9b09-2e90-56b7-b3c4-818d857043e0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2a71915a-346a-5a4b-8e7a-82a22dac5738,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6b90b34d-0d79-552c-bdeb-41ffe4daf5a3,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+523bac7c-66dd-50ee-b303-a806e83d1956,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+98782e35-e8ec-555e-9287-e8eed1d9f642,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+74e1a539-1210-5b62-bb66-570b20ea5688,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+bbb719f6-b794-5813-83ae-cceba569818e,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+cc3e0186-5211-5577-bc6b-156692695c34,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3659bbc5-fc6c-53ae-bda2-79d84b30ef4b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8e43ec4a-f2d2-54da-92b7-b59e2383284f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+59238097-891c-554b-a0c5-677eb8f8a7df,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a7c6ac83-9cde-57f2-a063-5c64de28b8e3,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+87ef963f-9af5-5403-942f-1812fa773541,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+24e467c3-c0e9-5f20-a500-2377d290385c,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d0fe0376-f953-50fa-9e1b-59a47582dc66,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e7044d85-6569-5b4d-b814-baff65622da1,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+252e9a79-3b2d-5dde-8c9d-55e2e6d0eb71,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+44684673-5329-5b8c-8bdc-1dfd0f46d7c0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f6741075-1082-5490-b36c-9ef19d76b500,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+42867dad-2cc8-56a4-b371-f63420b60157,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+fd42c3a2-3463-5efc-8ac3-72e1caa4bc6a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+23742c0a-aac2-5805-a790-d5c5cb92d849,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+692eebad-b8a9-5f52-a1e9-8817f67fae48,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+7e15d15b-9a9a-5d0d-984f-856b60ad555f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6c96940e-6855-5d9b-8539-fc8f5f38b392,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+23cff000-9877-5e78-86d0-bf509ea4a6fb,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+82198fba-aba6-5c31-b6e8-7ae52fec129d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+57c1acc4-971c-5981-9af6-840968cf1aad,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+bb68bfb1-8ad5-545e-b102-f07ae533ee60,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c37095bb-e85d-5bee-92a0-2d27f981ebc7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a2aecbde-1bfe-5c49-8fac-33c996a90f6f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a9efc33e-e1c2-59f9-93cb-37bf6227321c,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+be311a00-f399-54c9-b15d-0d21193caa13,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8ad275c0-0200-51ff-a31c-0a395dd35f0b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ee8cb033-0b75-56e4-a78c-c8decdbfbf56,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+39b6d6ae-7da9-5b2e-981e-9aed440fdd4a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+93680653-c48b-565d-be29-76c59a21d685,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+db34cf11-9e1c-5a5c-9173-e9001fb56c48,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+9237eaf6-b4f4-5dbb-a66c-1499a072e559,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+48914a60-adfd-5819-b975-04be547a51fd,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+9ba801b5-3fe7-5698-9ce6-484651620e3d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a2b2ba28-fcc1-5cf7-a996-fbbd1dff43fa,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3293d812-39d1-58c0-b9d9-10903bbad46e,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+7965d47e-35e1-55e5-bde0-982264ac839f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+7bc57c35-9c92-53ba-84c2-134728eeb557,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0d0252f5-a21d-50d9-8385-722ff556c567,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d0c586e5-ff00-5254-9786-fc829770de6a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+b65067c4-18c4-57a2-9ebb-996197ad3dd9,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2176a32c-aef5-5ca9-b70b-4a0fc619ff62,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+06700734-0f4b-5037-ab1f-d3c474e16160,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e897df5c-62c4-5a9e-9d58-434f50d92399,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+831070e0-8628-55e1-b757-c6d10ba73c1d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6bb32080-efdb-5eb2-bd27-ccd2271b8b42,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+059643f9-d56d-5bce-bcd7-5100df232548,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+120b279d-fea0-5f03-ab02-d064b50a5d60,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+bc41c24c-e94e-5440-83a1-cbe348b90ec6,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0272fd89-67fd-5d0b-8fd2-458c937cad98,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c3e4bcb6-c7cf-5a85-9476-18f53bdabba9,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d7990b5f-3003-5a6f-8a54-5db09d964a70,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+0b9b0a06-cc2c-5175-abf8-36941de6713b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4c6ed9e2-7ba4-57bd-a5bf-1df436fb92e8,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+08ffc289-ec99-574b-9127-73be73b0077f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ee02450a-a0bf-5a43-b11a-b9e684f49dce,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4f372774-ad42-56b5-b5e3-bad7755bbdac,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4491a669-eb0b-58e7-baf5-c9a64e879858,OUT_OF_RANGE,Width: value 2140.0 > max 2000.0
+4491a669-eb0b-58e7-baf5-c9a64e879858,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+502ea3ad-ca4d-5c36-9cf3-6e4b95c55bee,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+5d1ff0b7-ea66-5d97-8522-2a97eddaae60,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+e93a0817-58ab-5752-941e-92d4788de7a7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2e534b50-e611-58ff-a072-73b08dd8961b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+93c4d0e6-731c-5b26-8930-eeb64fbea3d7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+1f766720-eca3-5974-a68a-4f154782d7aa,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+760eebfd-0c32-594c-b4bf-99b666168256,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+82116991-1555-580f-aa67-398159302203,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+69fa00ca-2b87-5bd6-bbcf-3f05100f4e42,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+7ad605a1-aab5-5b28-8c09-886c109fcd6d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3094a6fb-cc87-5eed-a81b-bda969b16268,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+25da2900-2220-5ba3-81cd-e372c8b467d2,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+47b30419-1f62-56e1-b8f7-d3cfb26c7a9b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+857dd90e-1f83-5c08-a1e8-e0f25a09b3f0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d28763e0-8721-5cea-bdff-859fd58700f4,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4405ec7c-327b-5d86-ac5d-9f842e882176,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+62edbc0c-3c09-592f-943a-3f235b84404f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+7acb7b28-b5c2-57d8-b781-1bf1b85a3089,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+365d06d8-36f1-5be6-bad8-dea93c72a663,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+483fc5f9-a28f-589e-b993-ded99a1cb314,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+666bd1e7-9ed4-50a0-90e3-61805c87d5f0,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ad749894-41f2-5794-a3f5-4d8408ea91c6,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c8a5a625-6845-513a-a9a3-a69e0ac50452,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+ee457c88-7a5a-5ad6-9ef2-502737c93b8f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8c984dbc-daac-50de-9225-18cfc53aa4f5,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+8f2be0ce-58c9-5cce-ad01-9a1d98df4f1a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+b99f191c-835f-5e4e-99b9-efa8d42fca12,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+98bcb2f7-0da8-59b6-9029-bd27d00c3069,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+991262f6-c3af-56c0-b09d-23bfd3b2ced8,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+6b8c8b33-e58c-5048-892b-a832c4a3be6a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+796d2226-a5f6-5ddb-b8d1-6cdf311c19f8,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+f02f977b-9ea3-52c1-b400-685722fb95a1,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+dae72d76-f760-5075-b4cb-e2c1b75aedb7,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+67f7fb35-dcac-5c64-8d44-b6ed73c7b85d,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+b35d7d25-b7e2-50bb-ab83-5ef99fec0525,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+c98d6821-cb58-52cd-ab98-05f8682308fe,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+85daa443-a3f2-5bc4-a274-ce5a9b6ae5cd,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+46204c4e-3bc2-536e-9a4f-399d556d1340,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+02fb212f-7e57-56f0-afb5-c653cd489e8e,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+89e0dea8-a39b-521c-af50-672ec5ad7289,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+50a90e05-d7f1-56df-9b6e-753076311bfa,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+08364737-c5fc-56d4-8397-632aa2d630af,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+3fe145f0-bd3e-5094-9e27-0893ecf8645f,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+a2507375-4f7e-56fd-9ffe-5e13f0dcf28d,MISSING_REQUIRED_PROPERTY,flow_rate
+1ab582bf-f197-56f9-bacf-df28eca59236,MISSING_REQUIRED_PROPERTY,flow_rate
+e6290070-4cd6-5528-8d74-fd8a1e4cf360,MISSING_REQUIRED_PROPERTY,flow_rate
+5b33c30a-3597-59f7-9d28-5b4e3d54ce11,MISSING_REQUIRED_PROPERTY,flow_rate
+1044bd5b-1aa9-5a45-8175-a83230aa64b1,MISSING_REQUIRED_PROPERTY,flow_rate
+3f897e63-e792-57dd-b75b-2830c973a92f,MISSING_REQUIRED_PROPERTY,flow_rate
+0c99b439-5104-5b34-bdb5-8b689ace6ae4,MISSING_REQUIRED_PROPERTY,flow_rate
+6847e6c2-56e3-5119-8cda-57b38138bf49,MISSING_REQUIRED_PROPERTY,flow_rate
+59c66640-3661-5cea-827b-e12990308d69,MISSING_REQUIRED_PROPERTY,flow_rate
+01be6d39-093b-54ae-9ba8-f3c6b7534eee,MISSING_REQUIRED_PROPERTY,flow_rate
+13e76844-4f71-5d1a-9704-72443614a1ff,MISSING_REQUIRED_PROPERTY,flow_rate
+9ffebfe2-fe96-51fe-9e8b-d22d3a913c31,MISSING_REQUIRED_PROPERTY,flow_rate
+af2d86fd-597d-554a-a77a-90e2a11ba550,MISSING_REQUIRED_PROPERTY,flow_rate
+1c31506d-a26e-546a-b513-abc370f3e3d8,MISSING_REQUIRED_PROPERTY,flow_rate
+a4acf30b-a604-52e0-9603-3eb24fbc7ce7,MISSING_REQUIRED_PROPERTY,flow_rate
+e76865e4-443b-5e0b-964d-099487c6122c,MISSING_REQUIRED_PROPERTY,flow_rate
+87b37135-2e5c-5f73-acbe-fd131558b00f,MISSING_REQUIRED_PROPERTY,flow_rate
+04298c0d-3d82-5ce0-9ff5-ff8dcebdf42e,MISSING_REQUIRED_PROPERTY,flow_rate
+7a60a185-ad41-5452-a27b-7699fcd7526d,MISSING_REQUIRED_PROPERTY,flow_rate
+a0e5ee38-2247-5216-afa9-e8e7ba248e91,MISSING_REQUIRED_PROPERTY,flow_rate
+becec484-bf84-55d0-a3b2-2b73bdb21b67,MISSING_REQUIRED_PROPERTY,flow_rate
+e8260ae6-ffba-5115-9f7e-05999bc2d557,MISSING_REQUIRED_PROPERTY,flow_rate
+0b2959f3-b6d8-5d5d-aa87-99f90ff4b5aa,MISSING_REQUIRED_PROPERTY,flow_rate
+501d419f-a506-5a17-86e8-70324e5101e9,MISSING_REQUIRED_PROPERTY,flow_rate
+fdfc9187-15cc-526c-9ef7-d36bcea528ee,MISSING_REQUIRED_PROPERTY,flow_rate
+d5e5d388-575f-5c38-b614-8eaff37e5875,MISSING_REQUIRED_PROPERTY,flow_rate
+e6c9d46c-72b1-55fe-bd09-29ecbb88cea4,MISSING_REQUIRED_PROPERTY,flow_rate
+4fdcfd85-293a-5a2a-b77d-33d368b8d65d,MISSING_REQUIRED_PROPERTY,flow_rate
+1d268725-933d-5c8f-b46d-7e2856a06fe3,MISSING_REQUIRED_PROPERTY,flow_rate
+d24e8b67-e0f5-5760-8cf5-c3869637e8e8,MISSING_REQUIRED_PROPERTY,flow_rate
+36fa9283-d50c-5bea-bd94-496c425effb6,MISSING_REQUIRED_PROPERTY,flow_rate
+cd167c91-8daa-5031-98be-eb5c21f635af,MISSING_REQUIRED_PROPERTY,flow_rate
+ef935a87-3e8f-53f7-9c6b-29b41e06ce4f,MISSING_REQUIRED_PROPERTY,flow_rate
+5359e94c-9fd6-5bab-a25b-677d137912a3,MISSING_REQUIRED_PROPERTY,flow_rate
+8b56ca3e-e6bd-584d-b73d-dae57995e4a1,MISSING_REQUIRED_PROPERTY,flow_rate
+5099ec48-6fe9-5898-8612-6e21807e745a,MISSING_REQUIRED_PROPERTY,flow_rate
+58e32f37-ffb7-5966-9a2b-c5741de7f0be,MISSING_REQUIRED_PROPERTY,flow_rate
+f480f01b-eaf1-5d33-8c5d-92341eeca3b2,MISSING_REQUIRED_PROPERTY,flow_rate
+6fda590e-9846-5c49-b0b9-5c5289932c4a,MISSING_REQUIRED_PROPERTY,flow_rate
+a4f432d0-36b9-59a3-ba48-4e950b03c8a6,MISSING_REQUIRED_PROPERTY,flow_rate
+9a487d74-b404-52be-9129-a61902a2b275,MISSING_REQUIRED_PROPERTY,flow_rate
+d22193e4-4158-5199-a264-0829386bf5f1,MISSING_REQUIRED_PROPERTY,flow_rate
+90cb0b0d-7777-578f-86fd-5644d0ae880f,MISSING_REQUIRED_PROPERTY,flow_rate
+72443bc8-722f-5c98-a01b-69c304d436ac,MISSING_REQUIRED_PROPERTY,flow_rate
+40625ea3-740a-5c85-88db-1d2b76b31821,MISSING_REQUIRED_PROPERTY,flow_rate
+284c676e-1e03-5e7e-a5e7-39d952059721,MISSING_REQUIRED_PROPERTY,flow_rate
+9d3b04cf-f66c-5ebb-b69e-03ecc13a8da6,MISSING_REQUIRED_PROPERTY,flow_rate
+687bd0fe-1464-58cb-b1dc-f8f79b650c70,MISSING_REQUIRED_PROPERTY,flow_rate
+6eaf7f65-7076-5486-a8ca-5deb00423766,MISSING_REQUIRED_PROPERTY,flow_rate
+ba55ce01-0883-54a4-930d-a18c13e2d56f,MISSING_REQUIRED_PROPERTY,flow_rate
+93e8738f-9eb0-5536-a551-4d1c506af46e,MISSING_REQUIRED_PROPERTY,flow_rate
+bd98bded-873b-5a37-ba85-9178361e7b3c,MISSING_REQUIRED_PROPERTY,flow_rate
+ef9b2022-8b5c-5695-b937-b446b04e17b9,MISSING_REQUIRED_PROPERTY,flow_rate
+b8a89871-64ed-5562-8f35-caaecb96216c,MISSING_REQUIRED_PROPERTY,flow_rate
+9be6b711-5b23-5806-bb9d-d6acd2da17f4,MISSING_REQUIRED_PROPERTY,flow_rate
+d514ac0d-8337-5fdc-8f18-f60a58622461,MISSING_REQUIRED_PROPERTY,flow_rate
+ed0f36df-efb3-56d5-97b7-13f9486b4f12,MISSING_REQUIRED_PROPERTY,flow_rate
+8ee0f683-dfc3-5f59-974c-2be62eb46618,MISSING_REQUIRED_PROPERTY,flow_rate
+c8c72153-0f30-5f86-bbfd-94c2ba2dacdb,MISSING_REQUIRED_PROPERTY,flow_rate
+17dc3cd7-e9e9-525f-bd59-38887f183542,MISSING_REQUIRED_PROPERTY,flow_rate
+592baedf-4feb-5c15-9295-1ed767b8cfda,MISSING_REQUIRED_PROPERTY,flow_rate
+396e3b1f-12bf-5078-b42d-3a81dce9000b,MISSING_REQUIRED_PROPERTY,flow_rate
+3a6d3f02-464f-5591-a82f-52db6d1c131d,MISSING_REQUIRED_PROPERTY,flow_rate
+c8a37e2c-529b-5e5a-abab-820c8cbbb25c,MISSING_REQUIRED_PROPERTY,flow_rate
+b12d6371-173b-55ab-8159-dc16e96bb8e2,MISSING_REQUIRED_PROPERTY,flow_rate
+1774eccf-95d1-5efc-a4b5-5be3d8dedebc,MISSING_REQUIRED_PROPERTY,flow_rate
+c1376779-c0b1-5445-83f8-65e92928a2ac,MISSING_REQUIRED_PROPERTY,flow_rate
+92648a12-c152-53aa-83ed-065356dd7eff,MISSING_REQUIRED_PROPERTY,flow_rate
+d1d95534-4942-50c1-9a90-002f85c2626e,MISSING_REQUIRED_PROPERTY,flow_rate
+4b100fc6-db73-5d60-9188-05588c86ed0c,MISSING_REQUIRED_PROPERTY,flow_rate
+4d86db3d-d5b2-5a7e-bf9d-a08db56beafe,MISSING_REQUIRED_PROPERTY,flow_rate
+a828a986-7b99-5397-b63d-97a6ff4f8a79,MISSING_REQUIRED_PROPERTY,flow_rate
+a123f2cf-c71f-54a7-b19f-afed57801720,MISSING_REQUIRED_PROPERTY,flow_rate
+c8f402b0-2656-5c75-88e5-18841254e21c,MISSING_REQUIRED_PROPERTY,flow_rate
+8a8ed00f-2a28-54a8-9bd5-f31d9549abb2,MISSING_REQUIRED_PROPERTY,flow_rate
+0427e6d7-984d-5e33-af94-206d2e94dcf7,MISSING_REQUIRED_PROPERTY,flow_rate
+31a9ed03-b95e-51b7-884b-28bf17c50d8d,MISSING_REQUIRED_PROPERTY,flow_rate
+c26f40a5-ef62-534d-a907-65e0f92c39e6,MISSING_REQUIRED_PROPERTY,flow_rate
+c9422551-e4ad-5849-9f76-88af07969062,MISSING_REQUIRED_PROPERTY,flow_rate
+4ee49d29-d344-5776-b0f0-4f43a5143c0e,MISSING_REQUIRED_PROPERTY,flow_rate
+09fc5a4c-334f-51ce-9198-4fae98922854,MISSING_REQUIRED_PROPERTY,flow_rate
+9e7334df-9d8e-5a3b-b971-62abf04daf2d,MISSING_REQUIRED_PROPERTY,flow_rate
+e901087c-2f35-57a8-8cf2-00e0e726af47,MISSING_REQUIRED_PROPERTY,flow_rate
+f1be5978-1ad2-5f72-a651-28018b4058b0,MISSING_REQUIRED_PROPERTY,flow_rate
+19e56931-1d96-5771-b5a3-602499a32705,MISSING_REQUIRED_PROPERTY,flow_rate
+563ccd2a-5808-5967-be53-54fd09d63827,MISSING_REQUIRED_PROPERTY,flow_rate
+19e7ea54-89c1-5d89-acb0-4c01a2528d8e,MISSING_REQUIRED_PROPERTY,flow_rate
+45a66976-e1d4-5ab9-8778-f2d3bdc86393,MISSING_REQUIRED_PROPERTY,flow_rate
+8dee3fe3-4a38-5dd2-8d00-a2852dbb6c84,MISSING_REQUIRED_PROPERTY,flow_rate
+f8da4e75-cf8c-592e-9ff0-d334a88ac4f5,MISSING_REQUIRED_PROPERTY,flow_rate
+ccb46376-f297-51a6-a464-32a4a20c3388,MISSING_REQUIRED_PROPERTY,flow_rate
+3fab2a27-22e3-541f-b552-0039dfac815c,MISSING_REQUIRED_PROPERTY,flow_rate
+fc991c03-32c8-5767-8c2f-33ecec199d19,MISSING_REQUIRED_PROPERTY,flow_rate
+770513bd-f093-5a69-8354-fcc4ac389575,MISSING_REQUIRED_PROPERTY,flow_rate
+160315ff-f5ff-571d-9c8c-e0add727bec5,MISSING_REQUIRED_PROPERTY,flow_rate
+c14dcda6-6ef4-5b70-aa55-090606c0368b,MISSING_REQUIRED_PROPERTY,flow_rate
+5fa154fa-6ae3-5e7c-98ec-1d89c6513bdf,MISSING_REQUIRED_PROPERTY,flow_rate
+768a70da-c879-5073-b783-219feb4e5706,MISSING_REQUIRED_PROPERTY,flow_rate
+9fba4eb8-e210-5ac4-a3ec-c537dd16e2fb,MISSING_REQUIRED_PROPERTY,flow_rate
+3085beab-adc5-5fef-9c1c-47896d31ce4f,MISSING_REQUIRED_PROPERTY,flow_rate
+c0ea1bd6-5d8d-55f2-bd35-514830d9ff0d,MISSING_REQUIRED_PROPERTY,flow_rate
+66a85ae4-8039-5de2-a518-f3cf4ecd4d29,MISSING_REQUIRED_PROPERTY,flow_rate
+175e80ca-3757-5e9a-9446-19aa1aaa5506,MISSING_REQUIRED_PROPERTY,flow_rate
+c7496f08-1c51-5d27-85b3-b108c40d356a,MISSING_REQUIRED_PROPERTY,flow_rate
+a2cb639e-1818-5690-b760-1cc052f03c4b,MISSING_REQUIRED_PROPERTY,flow_rate
+c203e0e9-357d-5ece-8054-b0c59f19c657,MISSING_REQUIRED_PROPERTY,flow_rate
+f0f0fa5d-3527-5cc3-b41c-dd114e044e49,MISSING_REQUIRED_PROPERTY,flow_rate
+34ac3bc2-9b43-5651-ae4a-1fae801d9f42,MISSING_REQUIRED_PROPERTY,flow_rate
+2421c6aa-7dd6-5ce2-aa28-5c7a43f16dbf,MISSING_REQUIRED_PROPERTY,flow_rate
+5024e4b2-b7cd-54b2-b89c-cad1c19fd3a4,MISSING_REQUIRED_PROPERTY,flow_rate
+ffb1af37-c39d-50c2-8f2d-a9fa5481e890,MISSING_REQUIRED_PROPERTY,flow_rate
+f707d9ae-0e02-5ad4-abbc-fe8b9a051c8a,MISSING_REQUIRED_PROPERTY,flow_rate
+c55fbbaf-d542-5485-a54f-3616c2d81b99,MISSING_REQUIRED_PROPERTY,flow_rate
+12b1b301-4d5d-5c50-b009-9ff2266e20cf,MISSING_REQUIRED_PROPERTY,flow_rate
+b349e3b8-632e-52d2-a588-a8173d21cc5a,MISSING_REQUIRED_PROPERTY,flow_rate
+34cfe8d7-ccec-5281-9bd3-1aa9f728d9c4,MISSING_REQUIRED_PROPERTY,flow_rate
+82ce8570-221d-57a4-ad64-c02008570298,MISSING_REQUIRED_PROPERTY,flow_rate
+7813262e-e15e-5be2-9b9e-ad0f6a5ce278,MISSING_REQUIRED_PROPERTY,flow_rate
+bb7e97cd-de0c-5370-8e56-76c622119a56,MISSING_REQUIRED_PROPERTY,flow_rate
+74d3e477-44ee-5917-9ae7-caaf23ea5152,MISSING_REQUIRED_PROPERTY,flow_rate
+65e88402-4ecf-5906-adf1-d6d0716019b1,MISSING_REQUIRED_PROPERTY,flow_rate
+f8f19160-94d9-564e-84eb-0524c1306d8b,MISSING_REQUIRED_PROPERTY,flow_rate
+65c868a9-c45e-5819-8116-2215b17e488d,MISSING_REQUIRED_PROPERTY,flow_rate
+d9dd67b9-76cf-5788-a6e7-6a6bd72731b3,MISSING_REQUIRED_PROPERTY,flow_rate
+4ae8b4b3-a93b-5c43-8a72-aa4c49769ab3,MISSING_REQUIRED_PROPERTY,flow_rate
+a0edbaa2-7a45-50c5-a947-532064c0fe05,MISSING_REQUIRED_PROPERTY,flow_rate
+e14bc5ac-ba17-5126-877e-a829753ac0de,MISSING_REQUIRED_PROPERTY,flow_rate
+c39eba7c-afdc-5443-8227-6d671dbbb930,MISSING_REQUIRED_PROPERTY,flow_rate
+e42cf6e4-a293-576a-b98e-cf6d3d51cb8e,MISSING_REQUIRED_PROPERTY,flow_rate
+d6504521-b7b9-5005-8c25-4fb9d67b007a,MISSING_REQUIRED_PROPERTY,flow_rate
+0d95e3d4-5e1e-5920-8425-c0fbb81e0daf,MISSING_REQUIRED_PROPERTY,flow_rate
+d9306556-f9f3-5bb6-835e-4d48e7e01a45,MISSING_REQUIRED_PROPERTY,flow_rate
+569e1cef-86e0-5445-a85e-49290ed9bfce,MISSING_REQUIRED_PROPERTY,flow_rate
+fb732dbb-acc0-5959-9aa9-255d9a491234,MISSING_REQUIRED_PROPERTY,flow_rate
+8533873d-c61d-56b2-b005-b089f9ef8eb6,MISSING_REQUIRED_PROPERTY,flow_rate
+3a2d8fdb-927a-51d7-a735-f3dbe38bdd74,MISSING_REQUIRED_PROPERTY,flow_rate
+2cc07622-8c79-5f0a-88ca-1c715e77a097,MISSING_REQUIRED_PROPERTY,flow_rate
+0ac6df96-ce0b-54c9-9a24-5a8425c79cba,MISSING_REQUIRED_PROPERTY,flow_rate
+4b9ef48a-83e9-544d-a055-5e26f9a9aaf7,MISSING_REQUIRED_PROPERTY,flow_rate
+2779afc6-2f0b-5d7b-a80c-3f7645016d3a,MISSING_REQUIRED_PROPERTY,flow_rate
+12bc1c03-033b-5f2c-9f0b-f6fbce996282,MISSING_REQUIRED_PROPERTY,flow_rate
+c387f2f4-181e-581e-8e2b-4b3f6f6841dd,MISSING_REQUIRED_PROPERTY,flow_rate
+a47685cd-3a3b-5ac5-9e38-2d35577448db,MISSING_REQUIRED_PROPERTY,flow_rate
+81d55daa-3c72-57a8-92d3-a57d680b0f04,MISSING_REQUIRED_PROPERTY,flow_rate
+05f4f544-a562-5074-a424-b8ccd95b24c8,MISSING_REQUIRED_PROPERTY,flow_rate
+f2904fbc-3bff-5dd4-a392-33be5fb8cf6b,MISSING_REQUIRED_PROPERTY,flow_rate
+40a2f9ec-d191-5460-9ab0-461b6f882e3c,MISSING_REQUIRED_PROPERTY,flow_rate
+47eb650c-5f17-548f-834d-d30956224ad7,MISSING_REQUIRED_PROPERTY,flow_rate
+f987ffbf-117e-5a51-a9c7-ea6bae6ed38b,MISSING_REQUIRED_PROPERTY,flow_rate
+fe314a32-0c96-5e88-93af-716fee2661d9,MISSING_REQUIRED_PROPERTY,flow_rate
+d1c728bd-5afe-53a7-86d5-806fa026d661,MISSING_REQUIRED_PROPERTY,flow_rate
+b77513c2-56bc-5821-a020-103ff65f24bc,MISSING_REQUIRED_PROPERTY,flow_rate
+89825d39-d76b-5f38-9bdd-87649ed2b9c8,MISSING_REQUIRED_PROPERTY,flow_rate
+932e3db3-87ed-5c37-876c-d40fa010deaa,MISSING_REQUIRED_PROPERTY,flow_rate
+cdb55ccf-81c5-5c6a-abf8-cf91493666e0,MISSING_REQUIRED_PROPERTY,flow_rate
+dfcdfcd4-2550-5e61-9c8e-0662b1f0659d,MISSING_REQUIRED_PROPERTY,flow_rate
+aa61ab30-9a9c-5af7-958d-aed657b17db5,MISSING_REQUIRED_PROPERTY,flow_rate
+87a97bb5-5d52-5ff6-90ab-dffc3933639e,MISSING_REQUIRED_PROPERTY,flow_rate
+086e321b-c7e3-53a8-8589-07bb64918233,MISSING_REQUIRED_PROPERTY,flow_rate
+3111d3c5-0055-5991-9bde-8ceddbf35dbf,MISSING_REQUIRED_PROPERTY,flow_rate
+0b686860-61c3-5c00-9bc8-52c0636bce92,MISSING_REQUIRED_PROPERTY,flow_rate
+6969ac28-05f4-594a-93cf-ac3851ec1870,MISSING_REQUIRED_PROPERTY,flow_rate
+ed04e99c-9a5c-5fab-bee8-616b5bd83442,MISSING_REQUIRED_PROPERTY,flow_rate
+6246ffae-81b7-53c1-9c45-80d29eac373b,MISSING_REQUIRED_PROPERTY,flow_rate
+ed92eff1-0d2d-52bc-944c-f3ad9a8c537d,MISSING_REQUIRED_PROPERTY,flow_rate
+3ba3179b-0677-58a9-a0ff-6bab796fdb9b,MISSING_REQUIRED_PROPERTY,flow_rate
+a2ed30d7-ee84-510a-82a6-cf14ba138253,MISSING_REQUIRED_PROPERTY,flow_rate
+5819c1a6-49b3-5bbb-af1b-d5537cdc49dc,MISSING_REQUIRED_PROPERTY,flow_rate
+03063da1-5c11-58f1-93fa-a630f9d19b3e,MISSING_REQUIRED_PROPERTY,flow_rate
+a3d792a7-2017-5162-94d0-e7f82d585a6f,MISSING_REQUIRED_PROPERTY,flow_rate
+200c4c57-6fbb-5a02-bb2a-ca14cf1570e4,MISSING_REQUIRED_PROPERTY,flow_rate
+781558ae-089c-5410-beb3-89c81f03f46c,MISSING_REQUIRED_PROPERTY,flow_rate
+666fedf6-3d2a-5ef5-a6a7-3277c1758dda,MISSING_REQUIRED_PROPERTY,flow_rate
+90d3eaee-196b-5882-882a-5ccafd7371b8,MISSING_REQUIRED_PROPERTY,flow_rate
+e782a378-0966-55fe-a92e-44af93741069,MISSING_REQUIRED_PROPERTY,flow_rate
+e6c6f696-3275-577d-b0b4-d46c3bcf4b00,MISSING_REQUIRED_PROPERTY,flow_rate
+64fd21c4-9b9a-517c-8b4b-3d3d8d72b61a,MISSING_REQUIRED_PROPERTY,flow_rate
+dc12affb-9576-5707-abf8-2a19659ec322,MISSING_REQUIRED_PROPERTY,flow_rate
+ca85a1f8-b716-5e37-be67-56c9ed09bd01,MISSING_REQUIRED_PROPERTY,flow_rate
+5722973b-54ce-5882-945a-627f676f1fcd,MISSING_REQUIRED_PROPERTY,flow_rate
+495204ba-3088-526f-aa77-e7690508e3a0,MISSING_REQUIRED_PROPERTY,flow_rate
+b182a4f4-c318-58bf-997a-d70b51a6cd18,MISSING_REQUIRED_PROPERTY,flow_rate
+c4d85e8b-58a0-5ded-90bf-a172aa948b75,MISSING_REQUIRED_PROPERTY,flow_rate
+b27e4b9b-f737-5255-8a18-9d060fa50e5f,MISSING_REQUIRED_PROPERTY,flow_rate
+6713fba0-7b9f-52b9-9304-68b9972b0b80,MISSING_REQUIRED_PROPERTY,flow_rate
+737104c9-0e32-5a5b-a2b8-5bb3a67c7047,MISSING_REQUIRED_PROPERTY,flow_rate
+ed878a15-85e2-5a22-9431-93e36f45e5e7,MISSING_REQUIRED_PROPERTY,flow_rate
+3daf340f-4286-515c-b032-4d1cb60eb295,MISSING_REQUIRED_PROPERTY,flow_rate
+646a5794-bd2b-5cc9-9aa4-a738091457a2,MISSING_REQUIRED_PROPERTY,flow_rate
+8c678b45-7bb1-501c-a510-0acf77952195,MISSING_REQUIRED_PROPERTY,flow_rate
+693acb92-9f51-55d5-8ecc-2090768287dc,MISSING_REQUIRED_PROPERTY,flow_rate
+5b2b21aa-62b7-58e8-bdea-f095cfa2fecb,MISSING_REQUIRED_PROPERTY,flow_rate
+79dc07ae-5e53-5659-bb6b-649439f8e542,MISSING_REQUIRED_PROPERTY,flow_rate
+601de61e-eb5f-5627-afb8-22246d82c1e5,MISSING_REQUIRED_PROPERTY,flow_rate
+a3aa93d1-dff0-52ab-956c-31f7b4990b82,MISSING_REQUIRED_PROPERTY,flow_rate
+c31466ab-f07b-58e7-862f-0fe00cdbfc5b,MISSING_REQUIRED_PROPERTY,flow_rate
+31b422e7-8a4a-5cc3-a75c-5cd6cfa0c8d8,MISSING_REQUIRED_PROPERTY,flow_rate
+2a5c5a8e-966d-59f1-bbe0-68fe0e204b66,MISSING_REQUIRED_PROPERTY,flow_rate
+cfa169b9-0ddd-55b0-b103-34227946a976,MISSING_REQUIRED_PROPERTY,flow_rate
+f2636f31-2a45-5d9a-b323-dd9d9194fc44,MISSING_REQUIRED_PROPERTY,flow_rate
+4960a457-9802-5a8f-b808-3d986e2f32bf,MISSING_REQUIRED_PROPERTY,flow_rate
+f82abc90-1b5d-5c58-82f8-279b4cf9c9dc,MISSING_REQUIRED_PROPERTY,flow_rate
+8b7e3161-05fd-5c40-8657-a89b0b3662d4,MISSING_REQUIRED_PROPERTY,flow_rate
+4e072d20-5c1d-575c-9a9a-2274860dfe81,MISSING_REQUIRED_PROPERTY,flow_rate
+3bd20bfe-a5e1-5717-aff7-c9d2ae869a26,MISSING_REQUIRED_PROPERTY,flow_rate
+6f9ac446-662b-5ff4-a77e-9f8923443529,MISSING_REQUIRED_PROPERTY,flow_rate
+e3e877d7-0d00-5703-8e52-78a1366530a8,MISSING_REQUIRED_PROPERTY,flow_rate
+907dd959-69b3-5cbd-865f-bcb0fedbf806,MISSING_REQUIRED_PROPERTY,flow_rate
+ce45257b-3cb3-58a9-b98e-5191437b4098,MISSING_REQUIRED_PROPERTY,flow_rate
+7677ca0f-75a3-52bf-9550-07099a4aa812,MISSING_REQUIRED_PROPERTY,flow_rate
+daf6a388-3cdd-5e64-af76-d6c292d25ee2,MISSING_REQUIRED_PROPERTY,flow_rate
+982b3be5-9252-5c08-8860-2875561c8edd,MISSING_REQUIRED_PROPERTY,flow_rate
+ee1dac46-298f-5701-a8d4-2615f648fad5,MISSING_REQUIRED_PROPERTY,flow_rate
+8658e1f8-bb9c-5200-bf3e-fd735c002746,MISSING_REQUIRED_PROPERTY,flow_rate
+0e80bca5-d5e3-5d74-998d-3b51d8106ee6,MISSING_REQUIRED_PROPERTY,flow_rate
+49e030fa-fd5b-503b-b70c-8b9c9b165507,MISSING_REQUIRED_PROPERTY,flow_rate
+1d47513c-8b55-5a07-aac9-e8a38f5bca79,MISSING_REQUIRED_PROPERTY,flow_rate
+3f7698fe-dc46-5be5-9960-0e48d9ecfd2e,MISSING_REQUIRED_PROPERTY,flow_rate
+df237f00-7d1c-5f03-a15a-a50404c7d780,MISSING_REQUIRED_PROPERTY,flow_rate
+aae4f41b-4a09-521c-a770-684b3c735c48,MISSING_REQUIRED_PROPERTY,flow_rate
+cedc6ca9-9c38-5975-b10e-ad341e0dd6b3,MISSING_REQUIRED_PROPERTY,flow_rate
+6b4633aa-4ad5-598f-87bf-00bca428863c,MISSING_REQUIRED_PROPERTY,flow_rate
+13db4d84-f9e3-5a95-adc5-f8e818f01b0b,MISSING_REQUIRED_PROPERTY,flow_rate
+d0dd7b79-dae5-54f9-a2d4-fb83dde09303,MISSING_REQUIRED_PROPERTY,flow_rate
+3024ff38-e6c4-5edf-a2dc-c1c26be8bf96,MISSING_REQUIRED_PROPERTY,flow_rate
+03ce7483-d2af-5ab6-bb3a-6ccbc1fdfe47,MISSING_REQUIRED_PROPERTY,flow_rate
+7edf8d88-14d1-5026-b7bb-cc71868817bf,MISSING_REQUIRED_PROPERTY,flow_rate
+80289f6b-4793-5447-a9b9-24d54eec8d6f,MISSING_REQUIRED_PROPERTY,flow_rate
+772259dc-6b8f-5d0a-a02d-611ca1fc438f,MISSING_REQUIRED_PROPERTY,flow_rate
+6aee90ad-7301-56d1-94f0-01b03e8c7e4d,MISSING_REQUIRED_PROPERTY,flow_rate
+132ddb33-b3ae-5e77-897d-f8de680073ac,MISSING_REQUIRED_PROPERTY,flow_rate
+5d3cca41-3c64-55ac-9268-9a0d65d72a5e,MISSING_REQUIRED_PROPERTY,flow_rate
+e14e6036-628e-5406-a362-47f85ede4f8f,MISSING_REQUIRED_PROPERTY,flow_rate
+430e15ce-3777-527b-ac3a-1aee6dc9a100,MISSING_REQUIRED_PROPERTY,flow_rate
+aa0791f5-36d8-5fdf-b428-03e79f9898b3,MISSING_REQUIRED_PROPERTY,flow_rate
+77fa3c38-64c0-5c40-bb6b-061c923f2a3c,MISSING_REQUIRED_PROPERTY,flow_rate
+ae7ba1f5-e252-5d06-86dd-592e3f3a4da8,MISSING_REQUIRED_PROPERTY,flow_rate
+7d1a5c0a-4aa2-5f50-9cf3-b6773ab55f84,MISSING_REQUIRED_PROPERTY,flow_rate
+f1a24026-859b-5b65-b21a-84ad2bd56b16,MISSING_REQUIRED_PROPERTY,flow_rate
+88e91781-8513-5636-b5dd-db76f161a2dc,MISSING_REQUIRED_PROPERTY,flow_rate
+2ee744b4-7bf0-5d11-9d87-4eb2b5353f5f,MISSING_REQUIRED_PROPERTY,flow_rate
+e9bf5f97-a333-5549-9998-424d3b1ec488,MISSING_REQUIRED_PROPERTY,flow_rate
+a0d797cc-9b2d-5668-9ab5-9f0df06fa252,MISSING_REQUIRED_PROPERTY,flow_rate
+dc13a2d1-77af-5b90-8aff-2d29cf298d0f,MISSING_REQUIRED_PROPERTY,flow_rate
+c2cc9c7e-543d-5b58-8864-a1004f5d4363,MISSING_REQUIRED_PROPERTY,flow_rate
+d4596fbc-6089-5bd9-bbe7-360fa9be9e60,MISSING_REQUIRED_PROPERTY,flow_rate
+238e801a-21c0-5fec-a796-74f02993b277,MISSING_REQUIRED_PROPERTY,flow_rate
+3c56d7ec-7893-5344-afb2-8bd5befa74ed,MISSING_REQUIRED_PROPERTY,flow_rate
+58ebd14b-c557-55ae-8358-4d038e04799e,MISSING_REQUIRED_PROPERTY,flow_rate
+10c85f3e-bb6c-5412-9063-11ce2da448c5,MISSING_REQUIRED_PROPERTY,flow_rate
+548e79cf-5bc6-547f-a014-21b23e48ca95,MISSING_REQUIRED_PROPERTY,flow_rate
+680bca66-f4f2-5fef-b29d-4e477e8fdd47,MISSING_REQUIRED_PROPERTY,flow_rate
+1c2ccadb-6426-5ebb-ad61-087b94c91701,MISSING_REQUIRED_PROPERTY,flow_rate
+43fa953e-a430-5bfa-9f64-0198622f59d4,MISSING_REQUIRED_PROPERTY,flow_rate
+3631c990-7542-5cd4-bad8-0ad0fae7e8c0,MISSING_REQUIRED_PROPERTY,flow_rate
+ebe724d0-2636-59c5-ae5f-eb27f93d804e,MISSING_REQUIRED_PROPERTY,flow_rate
+505178a2-bf80-5a9e-a2e0-30a080593b74,MISSING_REQUIRED_PROPERTY,flow_rate
+e854ccd4-1801-5d24-b845-b0d25aaf4ef1,MISSING_REQUIRED_PROPERTY,flow_rate
+4e02c961-fe1f-5dc3-a5f9-c1426a4234e9,MISSING_REQUIRED_PROPERTY,flow_rate
+fa057d63-49dd-5479-a5f9-c45132523a45,MISSING_REQUIRED_PROPERTY,flow_rate
+ccd3f5fc-c9f6-5e2a-8338-83aec1745daf,MISSING_REQUIRED_PROPERTY,flow_rate
+03cf74f2-f784-5059-9ed2-d9c67828091a,MISSING_REQUIRED_PROPERTY,flow_rate
+c96edd7b-c3de-56a8-94d4-6ae19593a07c,MISSING_REQUIRED_PROPERTY,flow_rate
+2286429d-e87e-5f78-a705-54b5b637d178,MISSING_REQUIRED_PROPERTY,flow_rate
+0ce6cbfe-fb8c-566e-9aa3-c469e11524db,MISSING_REQUIRED_PROPERTY,flow_rate
+d15970b1-7636-5437-bb8e-74c3ea94adaa,MISSING_REQUIRED_PROPERTY,flow_rate
+95568f8d-bff6-5e9a-87e6-5afec813833e,MISSING_REQUIRED_PROPERTY,flow_rate
+9a35575f-9dfd-52e3-b53c-e370012d7830,MISSING_REQUIRED_PROPERTY,flow_rate
+87e4884e-5308-5878-bc3e-525168ef7f0b,MISSING_REQUIRED_PROPERTY,flow_rate
+30820b1b-2a31-5242-8f54-0de1c69c7a1e,MISSING_REQUIRED_PROPERTY,flow_rate
+d8f478e0-3315-5984-bcc0-c051c879175c,MISSING_REQUIRED_PROPERTY,flow_rate
+9784de5e-41cb-5569-addc-5cf3652c6865,MISSING_REQUIRED_PROPERTY,flow_rate
+1aa46ebf-dc9c-54bd-b7db-3ec34aeac542,MISSING_REQUIRED_PROPERTY,flow_rate
+f9c0fe77-e196-51c6-84bb-6116185290aa,MISSING_REQUIRED_PROPERTY,flow_rate
+2aecc5b6-7df3-5bc4-856f-f2d1bab0bb80,MISSING_REQUIRED_PROPERTY,flow_rate
+1486347a-be7e-5d55-a9f5-da2968fe13bc,MISSING_REQUIRED_PROPERTY,flow_rate
+4a484677-e75a-58fd-8275-927d1912ba0c,MISSING_REQUIRED_PROPERTY,flow_rate
+77a4abab-8174-5373-a332-1912616f74f1,MISSING_REQUIRED_PROPERTY,flow_rate
+c196093c-1601-50fb-b182-69d4c17a511c,MISSING_REQUIRED_PROPERTY,flow_rate
+e949b757-a147-584c-8bd0-5d574ef4b911,MISSING_REQUIRED_PROPERTY,flow_rate
+bcea1929-8aed-5a09-899d-d43bb9ccd652,MISSING_REQUIRED_PROPERTY,flow_rate
+47e340f3-d1b6-5d20-b810-b2402c9c727f,MISSING_REQUIRED_PROPERTY,flow_rate
+8b599fb7-cdfb-548d-8ab9-366ca882ff8a,MISSING_REQUIRED_PROPERTY,flow_rate
+f47eae2b-732e-5b4a-9f18-0f0b044f6537,MISSING_REQUIRED_PROPERTY,flow_rate
+4a26c04b-cddd-5dd8-94e7-d02e10668241,MISSING_REQUIRED_PROPERTY,flow_rate
+20a028fe-c7d5-5eb6-b756-29556377a1c5,MISSING_REQUIRED_PROPERTY,flow_rate
+11d283aa-6832-57bc-8f22-7122ef838a84,MISSING_REQUIRED_PROPERTY,flow_rate
+c1312c7b-fb79-5690-af92-ac51d58ad102,MISSING_REQUIRED_PROPERTY,flow_rate
+03943c4a-f826-53c5-b663-0244f74a5afa,MISSING_REQUIRED_PROPERTY,flow_rate
+0c72f153-ad55-5768-ae9b-afaa0cdce8eb,MISSING_REQUIRED_PROPERTY,flow_rate
+45d9f46c-17ed-5c0b-b5d7-a5e832391459,MISSING_REQUIRED_PROPERTY,flow_rate
+94e457c4-9c3f-5940-9bb2-faebd960b6ef,MISSING_REQUIRED_PROPERTY,flow_rate
+195ef4f4-5600-5649-a5d7-396fc31ee717,MISSING_REQUIRED_PROPERTY,flow_rate
+e16ad2e4-6e3c-5b09-b76d-ea54e77f360d,MISSING_REQUIRED_PROPERTY,flow_rate
+ebba91e7-fdd7-5d5a-b706-5ff74f206753,MISSING_REQUIRED_PROPERTY,flow_rate
+45720cc3-4728-52f9-bd5f-a48c667fd2a6,MISSING_REQUIRED_PROPERTY,flow_rate
+e44b85f2-f069-5164-99d1-319e1b2a7ebd,MISSING_REQUIRED_PROPERTY,flow_rate
+b5d8b47b-ac93-57c9-a789-b257909712ea,MISSING_REQUIRED_PROPERTY,flow_rate
+7bb6ca1e-0a03-5d31-8d66-44686a4a12b0,MISSING_REQUIRED_PROPERTY,flow_rate
+6d373c60-12dc-5614-a0d4-16be2d7bf2ef,MISSING_REQUIRED_PROPERTY,flow_rate
+a639dec4-d7b0-5384-b9bb-f7e26494041e,MISSING_REQUIRED_PROPERTY,flow_rate
+d63b6975-4e75-5154-9cfb-7186ffb570f4,MISSING_REQUIRED_PROPERTY,flow_rate
+55da5799-da4c-574a-b17e-48d221ec3038,MISSING_REQUIRED_PROPERTY,flow_rate
+b1998b7d-ae10-5d2e-ab4b-889d4aa973d3,MISSING_REQUIRED_PROPERTY,flow_rate
+88b021ac-e63d-549d-997f-7031fcb04788,MISSING_REQUIRED_PROPERTY,flow_rate
+d889eec2-a2a6-52e8-8f9e-74e0bb0c5c99,MISSING_REQUIRED_PROPERTY,flow_rate
+ddd75b8f-30d1-5e97-ba1d-09548f880556,MISSING_REQUIRED_PROPERTY,flow_rate
+83bc5aab-cfd4-563f-83c6-555045acdd4f,MISSING_REQUIRED_PROPERTY,flow_rate
+57cadf48-3e5d-55bf-a348-ca350a651c71,MISSING_REQUIRED_PROPERTY,flow_rate
+729e8b0c-f472-59a2-ac39-f4904f04f587,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+041af709-fc6a-53de-85e7-4298c12304fb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+cab793c4-8e31-587c-a846-d340bd4db792,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+cab793c4-8e31-587c-a846-d340bd4db792,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+41abd2dc-95a3-50e0-80e1-c250a9a83399,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+584d0758-94e4-525f-9837-5d30827630bc,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+584d0758-94e4-525f-9837-5d30827630bc,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+ecd0c922-304b-554d-80cf-08a46fbb79b1,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+33dd0072-cf37-5934-8e8d-749944350400,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+33dd0072-cf37-5934-8e8d-749944350400,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+91072adc-ba20-5d67-a0f4-16fbd8fad862,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+8478937c-2cb9-59c8-9480-5aafa15d74f3,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+8478937c-2cb9-59c8-9480-5aafa15d74f3,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+3c0117ce-b8f4-5966-8b99-3ee6a220f6eb,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+6a9e9e4e-fe38-5071-9985-d32ebea851f5,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+bf4d4e83-3b86-5ebe-bf9c-4eefae40994a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+db756234-781a-5094-81a4-daa2c20826de,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+db756234-781a-5094-81a4-daa2c20826de,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+51e26b81-1814-5c4a-b7c8-c9e000697f4a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+f61551c1-399a-56e9-83e7-4d1926aa669b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+f61551c1-399a-56e9-83e7-4d1926aa669b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7162851c-d935-595b-b099-c3048b7bf4fa,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+56bd4c18-f34d-54c5-853b-035d215b7e6b,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+56bd4c18-f34d-54c5-853b-035d215b7e6b,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+f640e935-c92d-589e-80d7-62f3e6b89738,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+aea6927d-2cf2-5caf-aab0-727e9132995c,OUT_OF_RANGE,Width: value 3800.0 > max 2000.0
+aea6927d-2cf2-5caf-aab0-727e9132995c,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+09a894c6-2960-594e-9e9e-a56522d01d1c,OUT_OF_RANGE,Width: value 6001.99999999999 > max 2000.0
+09a894c6-2960-594e-9e9e-a56522d01d1c,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+b05d714c-1a37-534c-bf85-67634726cac5,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+b05d714c-1a37-534c-bf85-67634726cac5,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+bb2c4712-c52f-5127-9ef9-670f88b072f0,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+bb2c4712-c52f-5127-9ef9-670f88b072f0,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+b608a314-bfaf-584d-8884-592d6dacea56,OUT_OF_RANGE,Width: value 6001.99999999999 > max 2000.0
+b608a314-bfaf-584d-8884-592d6dacea56,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+231439b8-da7a-5071-b866-b7008df66403,OUT_OF_RANGE,Width: value 6001.99999999999 > max 2000.0
+231439b8-da7a-5071-b866-b7008df66403,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+f0a7066e-d40b-5d3d-9782-b0143e11957f,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+f0a7066e-d40b-5d3d-9782-b0143e11957f,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+a41ae22e-2082-56fc-b35f-ae2aaa02c19c,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+a41ae22e-2082-56fc-b35f-ae2aaa02c19c,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7de351fb-9317-58b9-982a-194abd19c47a,OUT_OF_RANGE,Width: value 6001.99999999999 > max 2000.0
+7de351fb-9317-58b9-982a-194abd19c47a,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+5b03b16b-eac1-5edd-aacc-d89c19284e93,OUT_OF_RANGE,Width: value 6002.0 > max 2000.0
+5b03b16b-eac1-5edd-aacc-d89c19284e93,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+efb4e666-8ca4-5014-894b-b5646ce666d0,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+fcc59fee-88de-5c7f-bb99-b909a5f0f180,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+9065a2be-9174-5175-b506-d4592ad0c251,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+67f309b7-8960-5d98-8434-ce14d5b18080,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+79c91015-7e81-5b2e-b8d7-0ec28bff56e7,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+457cce78-c15c-5102-81e8-01d83826fe52,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+7086a973-78b7-513a-ab6b-6be74b102641,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+641edc10-cb5d-5e4f-a599-58fd7e0c5779,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+c7977978-74dd-50bd-a38c-dedf59188910,INCONSISTENT_NEIGHBOR,"relation 'supports': expected at least 1, got 0"
+6a0e04de-e808-5841-9875-f8db5e2f3bbc,LOW_AI_CONF,class_conf=0.5
+a38ae25e-7465-5dbf-8b25-aa21260eef92,LOW_AI_CONF,class_conf=0.5
+5e3a2e96-dbc8-525f-bfc7-408472bbf368,LOW_AI_CONF,class_conf=0.5
+f9b477ab-8d7e-5d10-b105-198845dcf558,LOW_AI_CONF,class_conf=0.5
+0edab3b9-17d8-5f40-a153-39508357b86e,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+fbee5dc8-e5ca-58f6-9663-f9ce8ecc75c8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+b2032e52-4b84-542f-86a5-9301469a6e80,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9ca66d05-2eaf-589d-9414-2a3ded19dfef,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+9aeceeab-2af5-5cae-8f02-eeba25289e17,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+e2f79db1-5138-5797-906d-a6e335d73de8,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+f4460e76-20de-56e9-a2c5-dccc29f61094,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+8fd1e295-74b4-5f89-a851-1bc49daf8ac1,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+189d467a-d30e-5868-9849-78cb78f09f86,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+2f28e3bb-9c16-5aed-ac8f-ed1e45d8d536,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+038c301d-7e78-5a5f-bcb6-49b1aee746d4,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+8ea5719f-c990-59fe-b590-14d6234268a8,MISSING_REQUIRED_PROPERTY,Representation
+8ea5719f-c990-59fe-b590-14d6234268a8,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+df3d1201-1e73-5d25-a870-ede7eb052062,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+8bd4ee1e-d8e2-536a-800c-fd7b7adcab8d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+f61beaf0-2d98-5ca0-b21f-0c9b23548f9d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+66b159d6-077a-5383-b8b2-c10896ff1d3f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c997eee4-2f58-57e7-a55a-e44292b980a5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6baf2cac-c991-56e5-bad0-735352a8fcb3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33419ad4-4e83-51c5-9cdd-2c0c31aa069e,LOW_AI_CONF,class_conf=0.5
+9a9268e9-b731-5975-89a2-f2f27de430af,LOW_AI_CONF,class_conf=0.5
+c9059dec-ee11-5534-9ed3-0b49db6f031a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+082e340b-05fd-5b30-b44d-b742083b6ac1,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+581a6361-3efb-56df-8ad5-49b7127df091,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2ef2f4f2-4666-5bb4-be6b-2ef506dc8388,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4168550e-da94-5445-a57f-b0582c648ebe,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+270c2cd2-5038-5ec2-807a-776d9ea8a88b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d7eb02ad-0055-5368-886d-94246e88b167,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2f28e3bb-9c16-5aed-ac8f-ed1e45d8d536,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+df3d1201-1e73-5d25-a870-ede7eb052062,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+8bd4ee1e-d8e2-536a-800c-fd7b7adcab8d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+f61beaf0-2d98-5ca0-b21f-0c9b23548f9d,INCONSISTENT_NEIGHBOR,"relation 'hangsFrom': expected at least 1, got 0"
+66b159d6-077a-5383-b8b2-c10896ff1d3f,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+c997eee4-2f58-57e7-a55a-e44292b980a5,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+6baf2cac-c991-56e5-bad0-735352a8fcb3,INCONSISTENT_NEIGHBOR,"relation 'sitsOn': expected at least 1, got 0"
+33419ad4-4e83-51c5-9cdd-2c0c31aa069e,LOW_AI_CONF,class_conf=0.5
+9a9268e9-b731-5975-89a2-f2f27de430af,LOW_AI_CONF,class_conf=0.5
+c9059dec-ee11-5534-9ed3-0b49db6f031a,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+082e340b-05fd-5b30-b44d-b742083b6ac1,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+581a6361-3efb-56df-8ad5-49b7127df091,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+2ef2f4f2-4666-5bb4-be6b-2ef506dc8388,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4168550e-da94-5445-a57f-b0582c648ebe,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+270c2cd2-5038-5ec2-807a-776d9ea8a88b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d7eb02ad-0055-5368-886d-94246e88b167,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+038c301d-7e78-5a5f-bcb6-49b1aee746d4,INCONSISTENT_NEIGHBOR,"relation 'hostedBy': expected at least 1, got 0"
+8ea5719f-c990-59fe-b590-14d6234268a8,MISSING_REQUIRED_PROPERTY,Representation
+8ea5719f-c990-59fe-b590-14d6234268a8,INCONSISTENT_NEIGHBOR,"relation 'restsOn': expected at least 1, got 0"
+33419ad4-4e83-51c5-9cdd-2c0c31aa069e,LOW_AI_CONF,class_conf=0.5
+9a9268e9-b731-5975-89a2-f2f27de430af,LOW_AI_CONF,class_conf=0.5
+2ef2f4f2-4666-5bb4-be6b-2ef506dc8388,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+4168550e-da94-5445-a57f-b0582c648ebe,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+270c2cd2-5038-5ec2-807a-776d9ea8a88b,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+d7eb02ad-0055-5368-886d-94246e88b167,INCONSISTENT_NEIGHBOR,"relation 'fillsWall': expected at least 1, got 0"
+1a3e7ad7-81d0-5bc8-ba26-784508a620c6,LOW_AI_CONF,class_conf=0.5
