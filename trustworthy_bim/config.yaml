@@ -1,9 +1,9 @@
-# model:
-#   model: "llama3:8b"
-#   max_tokens: 256
-#   temperature: 0.0   # 可以之後再微調
+model:
+  model: "llama3:8b"
+  max_tokens: 256
+  temperature: 0.0   # 可以之後再微調
 
-model: mock
+# model: mock
 
 confidence_threshold: 0.75
 retrieval_top_n: 5
