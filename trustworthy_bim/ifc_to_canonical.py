@@ -539,7 +539,7 @@ def process_one_pack(
         }
 
     # TE: unit normalization
-    unit_overrides = load_yaml(Path("rules/unit_overrides.yaml"))
+    unit_overrides = load_yaml(Path("rules/units_override.yaml"))
     for name, obj in merged_props.items():
         v_raw = obj.get("v")
         u_raw = obj.get("u")
@@ -618,7 +618,16 @@ def process_one_pack(
             out_rows_flags.append({"asset_id": asset_id, "flag": "MISSING_REQUIRED_PROPERTY", "reason": k})
 
     for k, obj in merged_props.items():
-        msg = validate_ranges(k, obj.get("value_norm"), rule_ranges or {}, canonical)
+        v_norm = obj.get("value_norm")
+        # Generic rule: no numeric property should be negative
+        if isinstance(v_norm, (int, float)) and v_norm < 0:
+            out_rows_flags.append({
+                "asset_id": asset_id,
+                "flag": "NEGATIVE_VALUE",
+                "reason": f"{k}={v_norm} < 0"
+            })
+        # Range-based rules (global + class-specific from ranges.yaml)
+        msg = validate_ranges(k, v_norm, rule_ranges or {}, canonical)
         if msg:
             out_rows_flags.append({"asset_id": asset_id, "flag": "OUT_OF_RANGE", "reason": f"{k}: {msg}"})
 
@@ -682,7 +691,9 @@ def main():
         required_rules = load_yaml(Path("rules/required_props.yaml"))
         ranges_rules = load_yaml(Path("rules/ranges.yaml"))
         neighbor_rules = load_yaml(Path("rules/neighbor_rules.yaml"))
-        keyword_rules = load_yaml(Path("rules/keyword_rules.yaml"))
+        # keyword_validation rules merged into class_maps.yaml
+        class_maps_with_keywords = load_yaml(Path("rules/class_maps.yaml"))
+        keyword_rules = class_maps_with_keywords.get("keyword_validation") or {}
 
         # templates
         class_tmpl = read_text_if_exists(Path("prompt_templates/class_mapping.txt"))
