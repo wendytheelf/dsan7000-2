@@ -28,7 +28,6 @@ INPUT_DIR = PROJECT_DIR / "input"
 
 ERROR_TYPES = ["wrong_class", "out_of_range", "negative", "missing_prop"]
 
-# 妳原本的錯誤對應表，保留
 ERROR_PAIRS = {
     "Slabs": ["Foundation_Slab", "Floors"],
     "Foundation_Slab": ["Slabs", "Floors"],
@@ -47,7 +46,7 @@ ERROR_PAIRS = {
     "Windows": ["Doors"],
 }
 
-# 目前針對 Beam 幾何欄位做測試（因為 rules 裡有 required / range）
+# target beam classes for testing
 TARGET_BEAM_CLASSES = {"Beam (Concrete)", "Beam (Steel)"}
 
 NUMERIC_PROP_CANDIDATES = [
@@ -67,7 +66,6 @@ def inject_wrong_class(entity):
     if true_class in ERROR_PAIRS:
         wrong_class = random.choice(ERROR_PAIRS[true_class])
     else:
-        # 如果不在表裡，隨便換一個已知 class
         all_classes = list(ERROR_PAIRS.keys())
         if not all_classes:
             return None, None, None
@@ -78,7 +76,7 @@ def inject_wrong_class(entity):
 
 
 def find_numeric_field(entity):
-    """在 properties 裡找一個可用的 numeric field。"""
+    """find a usable numeric field in properties"""
     true_class = entity.get("tier_label")
     if true_class not in TARGET_BEAM_CLASSES:
         return None, None, None
@@ -99,7 +97,7 @@ def inject_out_of_range(entity):
         return None, None, None
 
     props = entity.get("properties", {})
-    # 直接放大 1000 倍，製造極端值
+    # times 1000 to make it out of range
     props[pset_name][field] = val * 1000.0
     entity["properties"] = props
     return "out_of_range", f"{pset_name}.{field}", val
@@ -122,7 +120,7 @@ def inject_missing_prop(entity):
         return None, None, None
 
     props = entity.get("properties", {})
-    # 找一個目前有存在的欄位，刪掉它
+    # find a property that currently exists and delete it
     candidates = []
     for pset_name, field in MISSING_PROP_CANDIDATES:
         pset = props.get(pset_name)
@@ -238,5 +236,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
