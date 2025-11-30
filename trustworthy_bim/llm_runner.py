@@ -72,7 +72,7 @@ def _render_template_safe_or_none(tmpl: str, mapping: Dict[str, str]) -> str | N
 
 def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float = 0.0) -> str:
     """
-    Generic LLM caller.
+    Generic LLM caller - memory-efficient stateless HTTP calls.
     - If model == 'mock': 不會進到這裡（上層已處理）
     - 其他情況：視為 Ollama 模型名稱，呼叫本機 Ollama API (/api/generate)
 
@@ -80,6 +80,9 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
     - 這個函式只回傳「模型生成的純文字」，上層會再用 json.loads() 解析。
     - prompt 已經在 class_mapping / property_extraction 中加好：
       '請回傳有效 JSON' 的指示。
+    - Each call is stateless: sends request, receives response, returns immediately.
+      No data is kept in RAM between calls - designed for Dockerized Ollama on GPU.
+    - Endpoint: http://localhost:11434 (for Dockerized Ollama)
     """
     model_name = _normalize_model_name(model)
 
@@ -87,7 +90,7 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
         raise ValueError("run_llm called with empty model name")
 
     # Ollama /api/generate 文件的基本格式：
-    # POST http://127.0.0.1:11434/api/generate
+    # POST http://localhost:11434/api/generate
     # payload: { "model": "...", "prompt": "...", "stream": false, "options": { ... } }
     payload = {
         "model": model_name,
@@ -102,8 +105,10 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
     }
 
     try:
+        # Use localhost for Dockerized Ollama on GPU
+        # Each call is stateless - no data kept in RAM between calls
         resp = requests.post(
-            "http://127.0.0.1:11434/api/generate",
+            "http://localhost:11434/api/generate",
             json=payload,
             timeout=600,
         )
@@ -113,6 +118,7 @@ def run_llm(prompt: str, model: str, max_tokens: int = 1024, temperature: float 
         text = data.get("response", "")
         if not isinstance(text, str):
             raise ValueError(f"Ollama response missing 'response' text: {data}")
+        # Return immediately - stateless call, no data accumulation
         return text
     except Exception as e:
         logger.error("run_llm failed for model=%s: %s", model_name, e)
